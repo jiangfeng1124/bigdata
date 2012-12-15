@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="upload">
+    <div class="block_title">Upload new model</div>
+      <p>Notice: this feature is temporarily not fulfilled.</p>
+      {% if notice %}
+        <span class="notice">{{notice}}</span>
+        <br><br>
+      {% endif %}
+      <form method="post" action="." enctype="multipart/form-data" name="form">
+        {% csrf_token %}
+        <table>
+        <tbody>
+          <tr>
+          <th>Model: </th>
+          <td><input type="file" name="filename"/></td>
+          </tr>
+          <tr>
+          <th>Language: </th>
+          <td>
+          <select name="lang">
+            <option value="R">R
+            <option value="python">Python
+          </select>
+          </td>
+          </tr>
+          <tr>
+          <th>Access: </th>
+          <td>
+          <select id="access_selection" name="access">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+          </select>
+          </td>
+          </tr>
+          <tr>
+          <th>Description: </th>
+          <td><textarea rows="3" cols="50" name="description" value=""></textarea></td>
+          </tr>
+          <tr>
+          <th><input class="submit_buttons" type="submit" value="Upload"></th>
+          </tr>
+        </tbody>
+        </table>
+      </form>
+  </div>
+{% endblock %}

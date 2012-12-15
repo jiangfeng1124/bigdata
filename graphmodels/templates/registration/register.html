@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Create an account{% endblock %}
+
+{% block module %}
+  <div id="register">
+    <header class="module-hd">
+    <h1>Create my account</h1>
+    </header>
+
+    <div class="module-bd">
+      <form action="" method="post" class="form-page form-horizontal" id="new_user"">
+      {% csrf_token %}
+      {% if notice %}
+      <div class="form-group">
+        <div class="notice">{{ notice }}</div>
+      </div>
+      {% endif %}
+
+      <div class="form-group"> 
+        <label class="form-label" for="id_username">Username</label>
+        <div class="form-inputs">
+          <input type="text" autofocus="autofocus" class="input-large" id="id_username" name="username" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="id_password1">Password</label>
+        <div class="form-inputs">
+          <input type="password" class="input-large" name="password1" id="id_password1" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="id_password2">Confirm password</label>
+        <div class="form-inputs">
+          <input type="password" class="input-large" name="password2" id="id_password2" value="">
+        </div>
+      </div>
+      <div class="form-actions">
+        <input class="buttons" type="submit" value="Create account">
+        <ul class="help-block">
+          <li>Already have an account?
+          <a href="/accounts/login/">Sign in</a>
+          </li>
+        </ul>
+      </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

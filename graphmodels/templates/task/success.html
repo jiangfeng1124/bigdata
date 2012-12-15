@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="success">
+    <span class="notice">Congratulations! Your task has been successfully uploaded.</span>
+    <p class="block_title">Task info: </p>
+    <table border="1">
+    <tbody>
+    <tr>
+      <th>Dataset: </th>
+      <td>{{ new_task.data.name }}</td>
+    </tr>
+    <tr>
+      <th>Program: </th>
+      <td><b>{{ new_task.program.name }}</b></td>
+    </tr>
+    <tr>
+      <th>Options: </th>
+      <td>{{ new_task.options }}</td>
+    </tr>
+    <tr>
+      <th>Access: </th>
+      <td>{{ new_task.access }}</td>
+    </tr>
+    <tr>
+      <th>Contributor: </th>
+      <td>{{ new_task.owner.username }}</td>
+    </tr>
+    <tr>
+      <th>Create date: </th>
+      <td>{{ new_task.create_date }}</td>
+    </tr>
+    <tr>
+      <th>Progress: </th>
+      <td>{{ new_task.progress }}</td>
+    </tr>
+    </tbody>
+    </table>
+
+  </div>
+
+{% endblock %}

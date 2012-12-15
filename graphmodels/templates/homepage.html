@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+Graphical Modeling Center
+{% endblock %}
+
+{% block content %}
+
+  <div id="introduction">
+    <div class="intro_info">
+      <p><b>Graphical Modeling Lab</b> is a free platform for estimating high-dimensional gaussian graphical models and providing intuitive graph visualizations.</p>
+      <div class="example">
+        <div class="example_hd">Example-1</div>
+        <div class="example_bd">
+          For a scale-free graph (<a href="/datasets/46/">sample_scale-free.csv</a>), the TIGER model gives the following estimation.<br>
+          <img src="/images/sample-scale_free.png" width=100%>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      <div class="example">
+        <div class="example_hd">Example-2</div>
+        <div class="example_bd">
+          For a hub graph (<a href="/datasets/48">sample_hub.csv</a>), the TIGER model gives the following estimation.<br>
+          <img src="/images/sample-hub.png" width=100%>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+
+    </div>
+
+    <div style="clear:both"></div>
+  </div>
+
+
+{% endblock %}

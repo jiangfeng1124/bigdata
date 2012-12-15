@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load filters %}
+
+{% block content %}
+    <div id="tasks">
+      {% if notice %}
+        <span class="notice">{{notice}}</span>
+        <br><br>
+      {% endif %}
+      <div class="block_title">Existing Tasks</div>
+      {% if task_list|length == 0 %}
+      <div>
+        <p>You haven't create any task yet. <a href="/task/submit/"><b>Create a new one</b></a>?</p>
+      </div>
+      <div style="clear:both"></div>
+      {% else %}
+      <div class="tbl_task">
+        <table class="sorted_table_box" cellpadding="2" cellspacing="0" align="left" border="1">
+          <tr>
+            <th>ID</th>
+            <th>Dataset</th>
+            <th>Program</th>
+            <th>User</th>
+            <th>Create date</th>
+            <th>Status</th>
+          </tr>
+          {% for task in task_list %}
+            <tr>
+              <td class="td_task"><a href="/tasks/{{ task.id }}">#{{ task.id }}</a></td>
+              <td class="td_data"><a href="/datasets/{{ task.data.id }}">{{ task.data }}</a></td>
+              <td class="td_prog"><a href="/models/"><b>{{ task.program }}</b></a></td>
+              <td class="td_user">{{ task.owner.username }}</td>
+              <td>{{ task.create_date|time_until }}</td>
+              <td>{{ task.progress }}</td>
+              <!--
+              <form action="." method="post" name="form">
+              {% csrf_token %}
+              <input type="hidden" name="id" value="{{ task.id }}">
+              {% if task.progress == "processed" %}
+              <td><input type="submit" value="Results"></td>
+              {% else %}
+              <td><input disabled="disabled" type="submit" value="Results"></td>
+              {% endif %}
+              </form>
+              -->
+            </tr>
+          {% endfor %}
+        </table>
+
+      </div>
+      {% endif %}
+{% endblock %}

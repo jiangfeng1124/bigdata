@@ -1,0 +1,145 @@
+{% load tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="/medias/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/medias/css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="/medias/css/ForceDirected.css"/>
+  <script src="/medias/js/tab.js" type="text/javascript" language="javascript"></script>
+</head>
+<body>
+
+  <div id="header" role="banner">
+  <div class="inner">
+    <a class="logo" href="/"><img src="/images/logo.png" width="360" height="50"></a>
+
+<!--
+    <span>
+    <form accept-charset="UTF-8" action="/search/" id="search-form" method="get">
+    {% csrf_token %}
+    <input type="text" id="keyword" name="keyword" placeholder="Search...">
+    <button class="icon-search">q</button>
+    </form>
+    </span>
+-->
+
+    {% if user.is_authenticated %}
+    <span class="user_info"><a class="signout-btn" href="/accounts/logout/">Sign out</a></span>
+    {% else %}
+    <div class="user_info">
+    <span class="divider"></span>
+    <a class="signin-btn "href="/accounts/login/">Sign in</a>
+    </div>
+    {% endif %}
+  </div>
+  </div>
+
+  <div id="content" rose="main">
+  <div class="inner">
+
+  {% if user.is_authenticated %}
+
+  <aside class="aside">
+    <header>
+    <div class="username">{{ user.username }}</div>
+    <a href="/accounts/profile" class="profile-link">View your profile</a>
+    </header>
+    <div class="info">
+    <ul>
+      <li class="li-dataset"><a onclick="return onClickDiv('subli-ds');">Datasets</a>
+      <div id="subli-ds" class="subli">
+        <ul>
+          <li><a class="{% active request "^/datasets/" %}" href="/datasets/">Existing datasets</a></li>
+          <li><a class="{% active request "^/dataset/upload/$" %}" href="/dataset/upload/">Upload new datasets</a></li>
+        </ul>
+      </div>
+      </li>
+      <li class="li-program"><a onclick="return onClickDiv('subli-prog')">Models</a>
+      <div id="subli-prog" class="subli">
+        <ul>
+          <li><a class="{% active request "^/models/" %}" href="/models/">Existing Models</a></li>
+          <li><a class="{% active request "^/model/upload/$" %}" href="/model/upload/">Upload new models</a></li>
+        </ul>
+      </div>
+      </li>
+      <li class="li-task"><a onclick="return onClickDiv('subli-task')">Tasks</a>
+      <div id="subli-task" class="subli">
+        <ul>
+          <li><a class="{% active request "^/tasks/" %}" href="/tasks/">Your tasks</a></li>
+          <li><a class="{% active request "^/task/(submit|new)/" %}" href="/task/submit/">Submit new tasks</a></li>
+        </ul>
+      </div>
+      </li>
+    </ul>
+    </div>
+  </aside>
+
+  <div class="main">
+  {% block content %}{% endblock %}
+  </div>
+
+  {% else %}
+
+  <div class="module">
+  {% block module %}
+    <div class="welcome"><img src="/images/welcome.gif"></div>
+    <div class="guide">
+      <a class="signup-link" href="/accounts/register/">
+        <span>Sign up</span>
+      </a>
+      <div class="what">
+        <h3>What is Graphical Model</h3>
+        <p>
+          "Graphical Model is a probabilistic model for which a graph denotes the conditional independence structure between random variables..."
+        </p>
+      </div>
+      <div class="why">
+        <h3>Why use Graphical Model</h3>
+        <p>
+          "By using Graphical Model, one can intuitively see the correlation between variables....."
+        </p>
+      </div>
+    </div>
+  {% endblock %}
+  </div>
+
+  {% endif %}
+
+  </div> <!-- div for content -->
+  </div> <!-- div for inner   -->
+
+  {% block footer %}
+
+  <div style="clear:both"></div>
+  <div id="footer">
+    <div class="inner">
+      <div class="mod">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="mailto:jiangg@princeton.edu">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="/specification/dataset">Data format</a></li>
+          <li><a href="/specification/model">Model api</a></li>
+        </ul>
+      </div>
+      <p id="copyright">@2012 ORFE.Princeton. All rights reserved.</p>
+      <div style="clear:both"></div>
+    </div>
+  </div>
+
+  {% endblock %}
+
+  {% block visualization %}
+
+  {% endblock %}
+
+</body>
+</html>

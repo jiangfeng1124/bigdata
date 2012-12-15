@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load filters %}
+
+{% block content %}
+  <div class="upload">
+      {% if notice %}
+        <span class="notice">{{notice}}</span>
+        <br><br>
+      {% endif %}
+      <form method="post" action="." enctype="multipart/form-data" name="form">
+      {% csrf_token %}
+      <div class="block_title">Step 1: Choose a dataset</div>
+      <div class="tbl_dataset">
+        <table class="sorted_table_box" cellpadding="2" cellspacing="0" align="left" border="1">
+          <tr>
+            <th>Dataset</th>
+            <th>User</th>
+            <th>#Dim</th>
+            <th>#Sample</th>
+            <th>Description</th>
+            <th>Choose</th>
+          </tr>
+          {% for dataset in dataset_list %}
+            <tr>
+              <td class="td_data"><a href="/datasets/{{ dataset.id }}">{{ dataset.name }}</a></td>
+              <td class="td_user">{{ dataset.owner.username }}</td>
+              <td>{{ dataset.dim }}</td>
+              <td>{{ dataset.size }}</td>
+              <td>{{ dataset.description }}</td>
+              <td><input type="radio" name="data" value="{{ dataset.id }}"></td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+      <div style="clear:both">
+      </div>
+
+      <br><br>
+      <div class="block_title">Step 2: Choose a Model</div>
+      <div class="tbl_program">
+        <table align="left" border="1"> 
+          <tr>
+            <th>Model</th>
+            <th>Contributor</th>
+            <th>Options</th>
+            <th>Choose</th>
+          </tr>
+          {% for program in program_list %}
+            <tr>
+              <td class="td_prog"><a href="/models/"><b>{{ program.name }}</b></a></td>
+              <td>{{ program.owner.username }}</td>
+              <td><textarea rows="2" cols="30" name={{ "options_"|append:program.id }} placeholder="set options here..." autocomplete="off"></textarea></td>
+              <td><input type="radio" name="program" value="{{ program.id }}"></td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+
+      <div style="clear:both">
+      </div>
+
+      <div id="task_access">
+        * Set this task as <input type="radio" name="access" value="public" checked="checked"><b>Public</b> or <input type="radio" name="access" value="Private"><b>Private</b>
+      </div>
+
+      <p><input class="submit_buttons" type="submit" value="Submit my task"></p>
+      </form>
+  </div>
+{% endblock %}

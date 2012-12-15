@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="upload">
+    <div class="block_title">Upload new dataset</div>
+      {% if notice %}
+        <span class="notice">{{notice}}</span>
+        <br><br>
+      {% endif %}
+      <form method="post" action="." enctype="multipart/form-data" name="form">
+        {% csrf_token %}
+        <table>
+        <tbody>
+          <tr>
+          <th>Dataset: </th>
+          <td><input type="file" name="filename"/></td>
+          </tr>
+          <tr>
+          <th>Access: </th>
+          <td>
+          <select id="access_selection" name="access">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+          </select>
+          </td>
+          </tr>
+          <tr>
+          <th>Separator: </th>
+          <td>
+            <select id="separation_character" name="sep">
+              <option value="tab">\t (tab)</option>
+              <option value="comma">, (comma)</option>
+              <option value="space">  (space)</option>
+              <option value="semicolon">; (semicolon)</option>
+            </select>
+          </td>
+          </tr>
+          <tr>
+            <th>Header: </th>
+            <td><input type="radio" name="header" value="yes">First row is header information<br>
+            <input type="radio" name="header" value="no" checked="checked">Don't use first row as header</td>
+          </tr>
+          <tr>
+          <th>Description: </th>
+          <td><textarea rows="3" cols="50" name="description" value=""></textarea></td>
+          </tr>
+          <tr>
+          <th><input class="submit_buttons" type="submit" value="Upload"></th>
+        </tbody>
+        </table>
+      </form>
+  </div>
+{% endblock %}

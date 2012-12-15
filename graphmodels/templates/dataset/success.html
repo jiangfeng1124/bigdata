@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="success">
+    <span class="notice">Congratulations! Your dataset has been successfully uploaded.</span>
+    <p class="block_title">Dataset info: </p>
+    <table border="1">
+    <tr>
+      <th>Name</th>
+      <td>{{ dataset.name }}</td>
+    </tr>
+    <tr>
+      <th>Access</th>
+      <td>{{ dataset.access }}</td>
+    </tr>
+    <tr>
+      <th>Contributor</th>
+      <td>{{ dataset.owner.username }}</td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td>{{ dataset.description }}</td>
+    </tr>
+    <tr>
+      <th>Sample size</th>
+      <td>{{ dataset.size }}</td>
+    </tr>
+    <tr>
+      <th>Dimension</th>
+      <td>{{ dataset.dim }}</td>
+    </tr>
+    </table>
+
+  </div>
+
+
+{% endblock %}

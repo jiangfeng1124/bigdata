@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Submit new task
+{% endblock %}
+
+{% block content %}
+  <div class="upload">
+    <div class="block_title">
+      New task
+    </div>
+    <form action="" method="post" enctype="multipart/form-data" name="form">
+      {% csrf_token %}
+      <input id="dataset_id" name="dataset_id" type="hidden" value="{{ dataset_id }}">
+      <input id="program_id" name="program_id" type="hidden" value="{{ program_id }}">
+       <table>
+        <tr>
+          <th>Dataset: </th>
+          <td><a name="dataset" value="{{ dataset_id }}" href="/datasets/"{{ dataset_id }}>{{ dataset_name }}</a></td>
+        </tr>
+        <tr>
+          <th>Model: </th>
+          <td><a name="program" value="{{ program_id }}" href="/models/">{{ program_name }}</a></td>
+        </tr>
+      </table>
+      <div class="prog_box">
+        <div class="prog_box_header">
+          Usage of <b>{{ program_name }}</b>
+        </div>
+        <div class="prg_usage">
+        {% if program_id != 1 %}
+          -l LAMBDA, --lambda=LAMBDA<br>
+          parameter to control the regularization<br>
+        {% else %}
+          -t THRESH, --thresh=THRESH<br>
+          threshold for screening the correlation matrix<br>
+        {% endif %}
+        </div>
+      <div>
+        <div class="prog_box_header">Set options: (leave it blank to use default setting)</div>
+        <div style="clear:both"></div>
+        <textarea rows="1" cols="40" name="options" placeholder="set options here..." autocomplete="off"></textarea>
+      </div>
+      <div id="task_access">
+        *Set this task as <input type="radio" name="access" value="public" checked="checked"><b>Public</b> or <input type="radio" name="access" value="Private"><b>Private</b>
+      </div>
+      </div>
+      <p><input class="submit_buttons" type="submit" value="Submit my task"></p>
+    </form>
+  </div>
+{% endblock%}

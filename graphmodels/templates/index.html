@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block title %}
+Graphical Modeling Center
+{% endblock %}
+
+{% block content %}
+  <div id="wrapper">
+    <div id="dataset_upload">
+      <span class="block_title">Existing Datasets</span>
+      <span class="buttons">
+        <a href="/dataset/upload/">Upload new dataset</a>
+      </span>
+      <div class="tbl_dataset">
+        <table align="left" border="1">
+          <tr>
+            <th>Dataset</th>
+            <th>Contributor</th>
+            <th>Dimension</th>
+            <th>#Sample</th>
+            <th>Description</th>
+          </tr>
+          {% for dataset in dataset_list %}
+            <tr>
+              <td>{{ dataset.name }}</td>
+              <td>{{ dataset.owner.username }}</td>
+              <td>{{ dataset.dim }}</td>
+              <td>{{ dataset.size }}</td>
+              <td>{{ dataset.description }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div style="clear: both"></div>
+      <div class="more">
+        <a href="#"><b>More datasets >></b></a>
+      </div>
+    </div>
+
+    <div id="select_models">
+      <span class="block_title">Existing Models</span>
+      <span class="buttons">
+        <a href="/program/upload/">Upload new models</a>
+      </span>
+
+      <div id="model_container">
+        <ul>
+          <li id="tab1"><a href="#" class="on" onclick="switchTab('tab1', 'con1'); this.blur(); return false;">Correlation</a></li>
+          <li id="tab2"><a href="#" onclick="switchTab('tab2', 'con2'); this.blur(); return false;">Glasso</a></li>
+          <li id="tab3"><a href="#" onclick="switchTab('tab3', 'con3'); this.blur(); return false;">CLIME</a></li>
+          <li id="tab4"><a href="#" onclick="switchTab('tab4', 'con4'); this.blur(); return false;">TIGER</a></li>
+        </ul>
+        <div style="clear: both">
+        </div>
+        <div id="con1">
+          The <b>correlation</b> model estimates a sparse inverse covariance matrix using a thresholding correlation matrix.
+        </div>
+        <div id="con2" style="display: none">
+          The <b>Glasso</b> model estimates a sparse inverse covariance matrix using a lasso(L1) penalty.
+        </div>
+        <div id="con3" style="display: none">
+          The <b>CLIME</b> model applies a constrained l1 minimization approach to sparse precision matrix estimation. 
+        </div>
+        <div id="con4" style="display: none">
+          The <b>TIGER</b> model applies a Tuning-Insensitive approach for estimating a sparse precision matrix.
+        </div>
+      </div>
+
+      <div style="clear: both"></div>
+      <div class="more">
+        <a href="#"><b>More models >></b></a>
+      </div>
+
+    </div>
+
+    <div id="tasks">
+      <span class="block_title">Existing Tasks</span>
+      <span class="buttons"><a href="/task/submit/">Submit new tasks</a></span>
+      <div class="tbl_task">
+        <table align="left" border="1">
+          <tr>
+            <th>ID</th>
+            <th>Dataset</th>
+            <th>Program</th>
+            <th>User</th>
+            <th>Create date</th>
+            <th>Status</th>
+            <th>View</th>
+          </tr>
+          {% for task in task_list %}
+            <tr>
+              <td>Task #{{ task.id }}</td>
+              <td>{{ task.data }}</td>
+              <td>{{ task.program }}</td>
+              <td>{{ task.owner.username }}</td>
+              <td>{{ task.create_date }}</td>
+              <td>{{ task.progress }}</td>
+              <form action="." method="post" name="form">
+              {% csrf_token %}
+              <input type="hidden" name="id" value="{{ task.id }}">
+              {% if task.progress == "processed" %}
+              <td><input type="submit" value="Results"></td>
+              {% else %}
+              <td><input disabled="disabled" type="submit" value="Results"></td>
+              {% endif %}
+              </form>
+            </tr>
+          {% endfor %}
+        </table>
+
+      </div>
+
+      <div id="visualization">
+        {% if result_dir %}
+        <div class="visual_title">
+          Blackboard --- results of Task #{{ task_id }}:
+        </div>
+        <ul>
+          <li class="graph"><img src="{{ result_graph }}" width="520" height="355"></li>
+        </ul>
+        {% else %}
+        <div class="visual_title">
+          Blackboard --- results will be shown here.
+        </div>
+        {% endif %}
+      </div>
+
+      <div style="clear: both"></div>
+      <div class="more">
+        <a href="#"><b>More tasks >></b></a>
+      </div>
+
+    </div>
+
+  </div>
+{% endblock %}

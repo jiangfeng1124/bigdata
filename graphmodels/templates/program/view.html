@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div id="models">
+      <div class="block_title">Recent Models</div>
+
+      <div id="model_container">
+        <div id="model_container_hd">
+        <ul>
+          <li id="tab1"><a href="#" class="on" onclick="switchTab('tab1', 'con1'); this.blur(); return false;">Correlation</a></li>
+          <li id="tab2"><a href="#" onclick="switchTab('tab2', 'con2'); this.blur(); return false;">Glasso</a></li>
+          <li id="tab3"><a href="#" onclick="switchTab('tab3', 'con3'); this.blur(); return false;">CLIME</a></li>
+          <li id="tab4"><a href="#" onclick="switchTab('tab4', 'con4'); this.blur(); return false;">TIGER</a></li>
+        </ul>
+        <div style="clear: both">
+        </div>
+        </div>
+        <div id="con1">
+          The <b>correlation</b> model estimates a sparse inverse covariance matrix using a thresholding correlation matrix.<br>
+          <h4>Options: </h4>
+          <div class="prg_usage">
+                    -t THRESH, --thresh=THRESH<br>
+                        threshold for screening the correlation matrix<br><br>
+
+                    -h, --help<br>
+                        Show this help message and exit<br>
+          </div>
+          <h4>Reference: </h4>
+          <div class="prg_ref">
+            <ul>
+              <li style="list-style:square">A. O. Hero III and B. Rajaratnam. Large Scale Correlation Screening. ArXiv e-prints, February 2011.</li>
+            </ul>
+          </div>
+          <div style="clear:both"></div>
+        </div>
+        <div id="con2" style="display: none">
+          The <b>Glasso</b> model estimates a sparse inverse covariance matrix using a lasso(L1) penalty.
+          <h4>Options: </h4>
+          <div class="prg_usage">
+                    -l LAMBDA, --lambda=LAMBDA<br>
+                        parameter to control the regularization<br><br>
+
+                    -h, --help<br>
+                        Show this help message and exit<br>
+          </div>
+          <h4>Reference: </h4>
+          <div class="prg_ref">
+            <ul>
+              <li style="list-style:square">J. Friedman, T. Hastie, and R. Tibshirani, “Sparse inverse covariance estimation with the graphical lasso,” Biostatistics, vol. 9, no. 3, p. 432, 2008.</li>
+            </ul>
+          </div>
+        </div>
+        <div id="con3" style="display: none">
+          The <b>CLIME</b> model applies a constrained l1 minimization approach to sparse precision matrix estimation. 
+          <h4>Options: </h4>
+          <div class="prg_usage">
+                    -l LAMBDA, --lambda=LAMBDA<br>
+                        parameter to control the regularization<br><br>
+
+                    -h, --help<br>
+                        Show this help message and exit<br>
+          </div>
+          <h4>Reference: </h4>
+          <div class="prg_ref">
+            <ul>
+              <li style="list-style:square">Cai, T., Liu, W. and Luo, X. A Constrained L1 Minimization Approach to Sparse Precision Matrix Estimation. Journal of the American Statistical Association 106 594–607, 201.1</li>
+            </ul>
+          </div>
+        </div>
+        <div id="con4" style="display: none">
+          The <b>TIGER</b> model applies a Tuning-Insensitive approach for estimating a sparse precision matrix.
+          <h4>Options: </h4>
+          <div class="prg_usage">
+                    -l LAMBDA, --lambda=LAMBDA<br>
+                        parameter to control the regularization<br><br>
+
+                    -h, --help<br>
+                        Show this help message and exit<br>
+          </div>
+          <h4>Reference: </h4>
+          <div class="prg_ref">
+            <ul>
+              <li style="list-style:square">Han Liu, Lie Wang. TIGER: A Tuning-Insensitive Approach for Optimally Estimating Gaussian Graphical Models. arXiv:1209.2437, 2012.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="clear: both"></div>
+
+    </div>
+{% endblock %}

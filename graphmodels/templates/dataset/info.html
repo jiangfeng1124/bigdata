@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load filters %}
+
+{% block content %}
+
+  <div class="info-box">
+    <div class="info-box-header">
+      <table cellpadding="5">
+        <tr>
+          <td><img src="/images/database.png" width="40"></td>
+          <td>{{ dataset.name }}</td>
+        </tr>
+      </table>
+    </div>
+    <div class="info-box-desc">
+      {{ dataset.description }}
+    </div>
+    <div class="info-box-attrs">
+      <table border="0" cellspacing="2" cellpadding="0">
+      <tr>
+        <th>Name</th>
+        <td>{{ dataset.name }}</td>
+      </tr>
+      <tr>
+        <th>Access</th>
+        <td>{{ dataset.access }}</td>
+      </tr>
+      <tr>
+        <th>Contributor</th>
+        <td>{{ dataset.owner.username }}</td>
+      </tr>
+      <tr>
+        <th>Sample size</th>
+        <td>{{ dataset.size }}</td>
+      </tr>
+      <tr>
+        <th>Dimension</th>
+        <td>{{ dataset.dim }}</td>
+      </tr>
+      </table>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+
+  <div class="show_hide_box">
+    <span class="show_hide_header">
+        <b>Create new task on this dataset</b>
+        <a class="icon" onclick="return onClickDiv2('show_hide_prog', 'arrow');"><span><img id="arrow" class="icon" src="/images/arrow_right.gif"></span></a>
+    </span>
+    <div id="show_hide_prog" class="tbl_program" style="display:none">
+        <table align="left" border="1"> 
+          <tr>
+            <th>Model</th>
+            <th>Contributor</th>
+            <th>Language</th>
+            <th>Created</th>
+            <th>Tasks</th>
+            <th></th>
+          </tr>
+          {% for program in program_list %}
+            <tr>
+              <td class="td_prog"><a href="/models/"><b>{{ program.name }}</b></a></td>
+              <td>{{ program.owner.username }}</td>
+              <td>{{ program.language }}</td>
+              <td>{{ program.create_date|time_until }}</td>
+              <td>{{ program.task_num }}</td>
+              <td><a href="/task/new?dataset_id={{ dataset.id }}&model_id={{ program.id }}">Run</a></td>
+            </tr>
+          {% endfor %}
+        </table>
+      <div style="clear:both"></div>
+    </div>
+    <div style="clear:both"></div>
+  </div>
+
+  <div class="tasks">
+    <div class="block_title">Existing tasks on {{ dataset.name }}</div>
+
+    <div class="tbl_task">
+      <table class="sorted_table_box" cellpadding="2" cellspacing="0" align="left" border="1">
+        <tr>
+          <th>ID</th>
+          <th>Dataset</th>
+          <th>Program</th>
+          <th>User</th>
+          <th>Create date</th>
+          <th>Status</th>
+        </tr>
+      {% if related_tasks|length == 0 %}
+        <tr class="even">
+          <td colspan="6" style="font-weight:bold; text-align:center; font-size:0.9em; color:#333;">There is no tasks run on this data yet.</td>
+        </tr>
+      {% else %}
+        {% for task in related_tasks %}
+          <tr>
+            <td class="td_task"><a href="/tasks/{{ task.id }}">#{{ task.id }}</a></td>
+            <td class="td_data"><a href="/datasets/{{ task.data.id }}">{{ task.data }}</a></td>
+            <td>{{ task.program }}</td>
+            <td class="td_user">{{ task.owner.username }}</td>
+            <td>{{ task.create_date|time_until }}</td>
+            <td>{{ task.progress }}</td>
+          </tr>
+        {% endfor %}
+      {% endif %}
+      </table>
+    </div>
+  </div>
+
+{% endblock %}

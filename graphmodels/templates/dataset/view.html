@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="datasets">
+      {% if notice %}
+        <span class="notice">{{notice}}</span>
+        <br><br>
+      {% endif %}
+      <div class="block_title">Datasets</div>
+
+      <div class="tbl_dataset">
+        <table class="sorted_table_box" cellpadding="2" cellspacing="0" align="left" border="1">
+          <thead>
+            <tr>
+              <th>Dataset</th>
+              <th>User</th>
+              <th>#Dim</th>
+              <th>#Sample</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          {% for dataset in dataset_list %}
+            <tr>
+              <td class="td_data"><a href="/datasets/{{ dataset.id }}">{{ dataset.name }}</a></td>
+              <td class="td_user">{{ dataset.owner.username }}</td>
+              <td>{{ dataset.dim }}</td>
+              <td>{{ dataset.size }}</td>
+              <td>{{ dataset.description }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div style="clear: both"></div>
+    </div>
+
+{% endblock %}

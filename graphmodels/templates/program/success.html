@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="success">
+    <span class="notice">Congratulations! Your program has been successfully uploaded.</span>
+    <p class="block_title">Model info: </p>
+    <table>
+    <tbody>
+    <tr>
+      <th>Name: </th>
+      <td>{{ program.name }}</td>
+    </tr>
+    <tr>
+      <th>Language: </th>
+      <td>{{ program.lang }}</td>
+    </tr>
+    <tr>
+      <th>Access: </th>
+      <td>{{ program.access }}</td>
+    </tr>
+    <tr>
+      <th>Contributor: </th>
+      <td>{{ program.owner.username }}</td>
+    </tr>
+    <tr>
+      <th>Description: </th>
+      <td>{{ program.description }}</td>
+    </tr>
+    </tbody>
+    </table>
+
+  </div>
+
+{% endblock %}
