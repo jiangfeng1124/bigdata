@@ -30,8 +30,8 @@ else:
   }
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
-		('Jiang Guo', 'jiangfeng1124@gmail.com'),
+  # ('Your Name', 'your_email@example.com'),
+  ('Jiang Guo', 'jiangfeng1124@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -100,8 +100,8 @@ STATICFILES_DIRS = (
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+  'django.contrib.staticfiles.finders.FileSystemFinder',
+  'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
@@ -110,24 +110,24 @@ SECRET_KEY = 'gc6vfd38prk**lvh)wrxswjtbr3)0s37fmfb1@pt1+y4vh32wi'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+  'django.template.loaders.filesystem.Loader',
+  'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.request',
-    'django.contrib.auth.context_processors.auth',
+  'django.core.context_processors.request',
+  'django.contrib.auth.context_processors.auth',
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
+  'django.middleware.common.CommonMiddleware',
+  'django.contrib.sessions.middleware.SessionMiddleware',
+  'django.middleware.csrf.CsrfViewMiddleware',
+  'django.contrib.auth.middleware.AuthenticationMiddleware',
+  'django.contrib.messages.middleware.MessageMiddleware',
+  # Uncomment the next line for simple clickjacking protection:
+  #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'graphmodels.urls'
@@ -136,31 +136,31 @@ ROOT_URLCONF = 'graphmodels.urls'
 WSGI_APPLICATION = 'graphmodels.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    #'/home/jiangfeng/Work/demo/graphmodels/graphmodels/templates',
-    os.path.join(os.path.dirname(__file__), 'templates').replace("\\", "/"),
+  # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+  # Always use forward slashes, even on Windows.
+  # Don't forget to use absolute paths, not relative paths.
+  #'/home/jiangfeng/Work/demo/graphmodels/graphmodels/templates',
+  os.path.join(os.path.dirname(__file__), 'templates').replace("\\", "/"),
 )
 
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'graphmodels.books',
-    # Uncomment the next line to enable the admin:
-    'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    'django.contrib.admindocs',
-    'graphmodels.accounts',
-    'graphmodels.dataset',
-    'graphmodels.program',
-    'graphmodels.task',
-    'graphmodels.filters',
-    'graphmodels.tags',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
+  'django.contrib.sites',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
+  'graphmodels.books',
+  # Uncomment the next line to enable the admin:
+  'django.contrib.admin',
+  # Uncomment the next line to enable admin documentation:
+  'django.contrib.admindocs',
+  'graphmodels.accounts',
+  'graphmodels.dataset',
+  'graphmodels.program',
+  'graphmodels.task',
+  'graphmodels.filters',
+  'graphmodels.tags',
 )
 
 # A sample logging configuration. The only tangible logging
