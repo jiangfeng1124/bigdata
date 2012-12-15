@@ -220,7 +220,7 @@
 {% block visualization %}
   {% if status == "1" %}
       <script src="/medias/js/jit.js" type="text/javascript" language="javascript" defer></script>
-      <script src="/medias/js/example1.js" type="text/javascript" language="javascript" defer></script>
+      <script src="/medias/js/force-direct.js" type="text/javascript" language="javascript" defer></script>
       <script type="text/javascript" defer>
         window.onload = function() {
           graph_data = JSON.parse('{{ graph_json_data|safe }}');
