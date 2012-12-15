@@ -1,0 +1,200 @@
+[
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "diameter",
+				"nodeFrom": "length",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "height",
+				"nodeFrom": "length",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "shucked_weight",
+				"nodeFrom": "length",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "viscera_weight",
+				"nodeFrom": "length",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 10,
+			"$color": "#83548B"
+		},
+		"id": "length",
+		"name": "length"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "height",
+				"nodeFrom": "diameter",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "shell_weight",
+				"nodeFrom": "diameter",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "rings",
+				"nodeFrom": "diameter",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 10,
+			"$color": "#83548B"
+		},
+		"id": "diameter",
+		"name": "diameter"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "viscera_weight",
+				"nodeFrom": "height",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "shell_weight",
+				"nodeFrom": "height",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "rings",
+				"nodeFrom": "height",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 12,
+			"$color": "#83548B"
+		},
+		"id": "height",
+		"name": "height"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "shucked_weight",
+				"nodeFrom": "whole_weight",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "viscera_weight",
+				"nodeFrom": "whole_weight",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "shell_weight",
+				"nodeFrom": "whole_weight",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 8,
+			"$color": "#83548B"
+		},
+		"id": "whole_weight",
+		"name": "whole_weight"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "shell_weight",
+				"nodeFrom": "shucked_weight",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "rings",
+				"nodeFrom": "shucked_weight",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 10,
+			"$color": "#83548B"
+		},
+		"id": "shucked_weight",
+		"name": "shucked_weight"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 8,
+			"$color": "#83548B"
+		},
+		"id": "viscera_weight",
+		"name": "viscera_weight"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "rings",
+				"nodeFrom": "shell_weight",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 12,
+			"$color": "#83548B"
+		},
+		"id": "shell_weight",
+		"name": "shell_weight"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 10,
+			"$color": "#83548B"
+		},
+		"id": "rings",
+		"name": "rings"
+	}
+]

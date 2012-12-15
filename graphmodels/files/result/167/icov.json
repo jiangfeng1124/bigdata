@@ -1,0 +1,229 @@
+{
+	"rows": [
+		{
+			"c": [
+				{
+					"v": "length"
+				},
+				{
+					"v": "diameter"
+				},
+				{
+					"v": -36.224
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "length"
+				},
+				{
+					"v": "height"
+				},
+				{
+					"v": -0.0002293301
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "length"
+				},
+				{
+					"v": "shucked_weight"
+				},
+				{
+					"v": -1.481935
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "length"
+				},
+				{
+					"v": "viscera_weight"
+				},
+				{
+					"v": -0.8167061
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "diameter"
+				},
+				{
+					"v": "height"
+				},
+				{
+					"v": -1.145507
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "diameter"
+				},
+				{
+					"v": "shell_weight"
+				},
+				{
+					"v": -0.8429545
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "diameter"
+				},
+				{
+					"v": "rings"
+				},
+				{
+					"v": -0.295992
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "height"
+				},
+				{
+					"v": "viscera_weight"
+				},
+				{
+					"v": -0.03558734
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "height"
+				},
+				{
+					"v": "shell_weight"
+				},
+				{
+					"v": -0.5911617
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "height"
+				},
+				{
+					"v": "rings"
+				},
+				{
+					"v": -0.25051
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "whole_weight"
+				},
+				{
+					"v": "shucked_weight"
+				},
+				{
+					"v": -29.23359
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "whole_weight"
+				},
+				{
+					"v": "viscera_weight"
+				},
+				{
+					"v": -13.77973
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "whole_weight"
+				},
+				{
+					"v": "shell_weight"
+				},
+				{
+					"v": -13.50636
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "shucked_weight"
+				},
+				{
+					"v": "shell_weight"
+				},
+				{
+					"v": 1.261939
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "shucked_weight"
+				},
+				{
+					"v": "rings"
+				},
+				{
+					"v": 0.7636832
+				}
+			]
+		},
+		{
+			"c": [
+				{
+					"v": "shell_weight"
+				},
+				{
+					"v": "rings"
+				},
+				{
+					"v": -1.333496
+				}
+			]
+		}
+	],
+	"cols": [
+		{
+			"type": "string",
+			"id": "A",
+			"label": "Node1"
+		},
+		{
+			"type": "string",
+			"id": "B",
+			"label": "Node2"
+		},
+		{
+			"type": "number",
+			"id": "C",
+			"label": "Partial Correlation"
+		}
+	]
+}

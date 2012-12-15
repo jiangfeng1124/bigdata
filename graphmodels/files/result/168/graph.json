@@ -1,0 +1,1470 @@
+[
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "V6",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V8",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V9",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V10",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V11",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V12",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V13",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V14",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V15",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V16",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V17",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V18",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V19",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V20",
+				"nodeFrom": "V1",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 12,
+			"$color": "#83548B"
+		},
+		"id": "V1",
+		"name": "V1"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V2",
+		"name": "V2"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V3",
+		"name": "V3"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V4",
+		"name": "V4"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V5",
+		"name": "V5"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V6",
+		"name": "V6"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V7",
+		"name": "V7"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V8",
+		"name": "V8"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V9",
+		"name": "V9"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V10",
+		"name": "V10"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V11",
+		"name": "V11"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V12",
+		"name": "V12"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V13",
+		"name": "V13"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V14",
+		"name": "V14"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V15",
+		"name": "V15"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V16",
+		"name": "V16"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V17",
+		"name": "V17"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V18",
+		"name": "V18"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V19",
+		"name": "V19"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V20",
+		"name": "V20"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "V22",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V23",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V27",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V29",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V31",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V32",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V35",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V36",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V40",
+				"nodeFrom": "V21",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 12,
+			"$color": "#83548B"
+		},
+		"id": "V21",
+		"name": "V21"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V22",
+		"name": "V22"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V23",
+		"name": "V23"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V24",
+		"name": "V24"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V25",
+		"name": "V25"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V26",
+		"name": "V26"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V27",
+		"name": "V27"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V28",
+		"name": "V28"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V29",
+		"name": "V29"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V30",
+		"name": "V30"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V31",
+		"name": "V31"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V32",
+		"name": "V32"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V33",
+		"name": "V33"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V34",
+		"name": "V34"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V35",
+		"name": "V35"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V36",
+		"name": "V36"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V37",
+		"name": "V37"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V38",
+		"name": "V38"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V39",
+		"name": "V39"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V40",
+		"name": "V40"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "V42",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V43",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V44",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V45",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V46",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V47",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V48",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V49",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V51",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V53",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V55",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V58",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V59",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V60",
+				"nodeFrom": "V41",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 12,
+			"$color": "#83548B"
+		},
+		"id": "V41",
+		"name": "V41"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V42",
+		"name": "V42"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V43",
+		"name": "V43"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V44",
+		"name": "V44"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V45",
+		"name": "V45"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V46",
+		"name": "V46"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V47",
+		"name": "V47"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "V58",
+				"nodeFrom": "V48",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 6,
+			"$color": "#83548B"
+		},
+		"id": "V48",
+		"name": "V48"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V49",
+		"name": "V49"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V50",
+		"name": "V50"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V51",
+		"name": "V51"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V52",
+		"name": "V52"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V53",
+		"name": "V53"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V54",
+		"name": "V54"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V55",
+		"name": "V55"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V56",
+		"name": "V56"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V57",
+		"name": "V57"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 6,
+			"$color": "#83548B"
+		},
+		"id": "V58",
+		"name": "V58"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V59",
+		"name": "V59"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V60",
+		"name": "V60"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "V62",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V63",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V64",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V65",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V67",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V68",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V69",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V71",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V72",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V73",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V74",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V75",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V76",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V79",
+				"nodeFrom": "V61",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 12,
+			"$color": "#83548B"
+		},
+		"id": "V61",
+		"name": "V61"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V62",
+		"name": "V62"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V63",
+		"name": "V63"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V64",
+		"name": "V64"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V65",
+		"name": "V65"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V66",
+		"name": "V66"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V67",
+		"name": "V67"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V68",
+		"name": "V68"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V69",
+		"name": "V69"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V70",
+		"name": "V70"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V71",
+		"name": "V71"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V72",
+		"name": "V72"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V73",
+		"name": "V73"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V74",
+		"name": "V74"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V75",
+		"name": "V75"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V76",
+		"name": "V76"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V77",
+		"name": "V77"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V78",
+		"name": "V78"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V79",
+		"name": "V79"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V80",
+		"name": "V80"
+	},
+	{
+		"adjacencies": [
+			{
+				"nodeTo": "V83",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V84",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V85",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V86",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V87",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V88",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V89",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V91",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V94",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V96",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V97",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V98",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V99",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			},
+			{
+				"nodeTo": "V100",
+				"nodeFrom": "V81",
+				"data": {
+					"$color": "#557EAA"
+				}
+			}
+		],
+		"data": {
+			"$type": "circle",
+			"$dim": 12,
+			"$color": "#83548B"
+		},
+		"id": "V81",
+		"name": "V81"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V82",
+		"name": "V82"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V83",
+		"name": "V83"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V84",
+		"name": "V84"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V85",
+		"name": "V85"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V86",
+		"name": "V86"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V87",
+		"name": "V87"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V88",
+		"name": "V88"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V89",
+		"name": "V89"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V90",
+		"name": "V90"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V91",
+		"name": "V91"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V92",
+		"name": "V92"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V93",
+		"name": "V93"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V94",
+		"name": "V94"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V95",
+		"name": "V95"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V96",
+		"name": "V96"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V97",
+		"name": "V97"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V98",
+		"name": "V98"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V99",
+		"name": "V99"
+	},
+	{
+		"adjacencies": [],
+		"data": {
+			"$type": "circle",
+			"$dim": 5,
+			"$color": "#83548B"
+		},
+		"id": "V100",
+		"name": "V100"
+	}
+]
