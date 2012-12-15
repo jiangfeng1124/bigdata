@@ -17,9 +17,6 @@ def time_until(value):
   except:
     return value
 
-  print now
-  print value
-  print difference
   if difference <= timedelta(minutes=1):
     return 'just now'
   return '%(time)s ago' % {'time': timesince(value).split(', ')[0]}
