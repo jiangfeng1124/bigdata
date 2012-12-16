@@ -1,10 +1,5 @@
 #from django.conf.urls import patterns, include, url
 from django.conf.urls.defaults import *
-from graphmodels.views import hello
-from graphmodels.views import current_datetime
-from graphmodels.views import hours_ahead
-from graphmodels.books.views import search
-from graphmodels.books.views import contact, thanks, add_publisher
 
 from graphmodels.accounts.views import profile, register
 from graphmodels.views import index
@@ -36,15 +31,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     #url(r'^admin/', include(admin.site.urls)),
-
-    url('^hello/$', hello),
-    url('^time/$', current_datetime),
-    url(r'^time/plus/(\d{1,2})/$', hours_ahead),
-    url(r'^search/$', search),
-    url(r'^contact/$', contact),
-    url(r'^contact/thanks/$', thanks),
-    url(r'^add_publisher/$', add_publisher),
-    url(r'^add_publisher/thanks/$', thanks),
 
     url(r'^$', index),
     #url(r'^accounts/index/$', index),
