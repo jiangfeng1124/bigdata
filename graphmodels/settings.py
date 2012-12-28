@@ -2,7 +2,7 @@
 import os.path
 import socket
 
-if socket.gethostname() == 'my-laptop':
+if socket.gethostname() == 'jiangfeng-laptop':
   DEBUG = True
   TEMPLATE_DEBUG = DEBUG
   DATABASES = {
@@ -150,7 +150,6 @@ INSTALLED_APPS = (
   'django.contrib.sites',
   'django.contrib.messages',
   'django.contrib.staticfiles',
-  'graphmodels.books',
   # Uncomment the next line to enable the admin:
   'django.contrib.admin',
   # Uncomment the next line to enable admin documentation:
