@@ -2,7 +2,7 @@
 import os.path
 import socket
 
-if socket.gethostname() == 'jiangfeng-laptop':
+if socket.gethostname() == 'jiangfeng-VirtualBox':
   DEBUG = True
   TEMPLATE_DEBUG = DEBUG
   DATABASES = {
