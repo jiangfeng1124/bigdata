@@ -2,7 +2,7 @@
 from django.conf.urls.defaults import *
 
 from graphmodels.accounts.views import profile, register
-from graphmodels.views import index
+from graphmodels.views import index, test
 from graphmodels.dataset.views import *
 from graphmodels.program.views import *
 from graphmodels.task.views import *
@@ -40,6 +40,7 @@ urlpatterns = patterns('',
     url(r'^accounts/profile/$', profile),
     url(r'^accounts/register/$', register),
     url(r'^index/$', index),
+    url(r'^test/$', test),
     url(r'^dataset/upload/$', dataset_upload),
     url(r'^datasets/$', dataset_view),
     url(r'^datasets/(\d+)/$', dataset_info),
