@@ -162,7 +162,7 @@ ul {
 }
 
 .module {
-  border: 3px solid #F2F2F2;
+  border-bottom: 3px solid #F2F2F2;
   border-radius: 3px;
 }
 
@@ -172,7 +172,7 @@ ul {
 
 .guide {
   position: relative;
-  padding-top: 24px;
+  padding-top: 28px;
 }
 
 .signup-link {
@@ -189,7 +189,7 @@ ul {
   display: inline-block;
   width: 180px;
   height: 44px;
-  margin: 3px 6px 10px;
+  margin: 5px 6px 10px;
   background-color: #39CC4A;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF39CC4A', endColorstr='#FF39B54A');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #39CC4A), color-stop(100%, #39B54A));
@@ -931,7 +931,7 @@ input.buttons {
 }
 
 #footer {
-  padding-top: 20px;
+  padding-top: 30px;
   margin-bottom: 20px;
 }
 
