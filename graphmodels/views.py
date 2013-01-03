@@ -16,3 +16,12 @@ def index(request):
 
   return render_to_response("homepage.html", RequestContext(request, {'user': user}))
 
+def test(request):
+
+  if request.user.is_authenticated():
+    user = request.user
+  else:
+    user = request.user
+
+  return render_to_response("test.html", RequestContext(request, {'user': user}))
+
