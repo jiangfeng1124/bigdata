@@ -1,161 +1,35 @@
-{% load tags %}
+{% extends "base.html" %}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>{% block title %}{% endblock %}</title>
-  <link rel="stylesheet" type="text/css" href="/medias/css/style.css"/>
-  <link rel="stylesheet" type="text/css" href="/medias/css/base.css"/>
-  <link rel="stylesheet" type="text/css" href="/medias/css/ForceDirected.css"/>
-  <link rel="stylesheet" type="text/css" href="/medias/bootstrap/css/bootstrap.css"/>
-</head>
-<body>
+{% block title %}
+Graphical Modeling Center
+{% endblock %}
 
-  <div id="header" role="banner">
-  <div class="inner">
-    <a class="logo" href="/"><img src="/images/logo.png" width="360" height="50"></a>
+{% block content %}
 
-<!--
-    <span>
-    <form accept-charset="UTF-8" action="/search/" id="search-form" method="get">
-    {% csrf_token %}
-    <input type="text" id="keyword" name="keyword" placeholder="Search...">
-    <button class="icon-search">q</button>
-    </form>
-    </span>
--->
-
-    {% if user.is_authenticated %}
-    <span class="user_info"><a class="signout-btn" href="/accounts/logout/">Sign out</a></span>
-    {% else %}
-    <div class="user_info">
-    <span class="divider"></span>
-    <a class="signin-btn "href="/accounts/login/">Sign in</a>
-    </div>
-    {% endif %}
-  </div>
-  </div>
-
-  <div id="content" rose="main">
-  <div class="inner">
-
-  {% if user.is_authenticated %}
-
-  <aside class="aside">
-    <header>
-    <div class="username">{{ user.username }}</div>
-    <a href="/accounts/profile" class="profile-link">View your profile</a>
-    </header>
-    <div class="info">
-    <ul>
-      <li class="li-dataset"><a onclick="return onClickDiv('subli-ds');">Datasets</a>
-      <div id="subli-ds" class="subli">
-        <ul>
-          <li><a class="{% active request "^/datasets/" %}" href="/datasets/">Existing datasets</a></li>
-          <li><a class="{% active request "^/dataset/upload/$" %}" href="/dataset/upload/">Upload new datasets</a></li>
-        </ul>
-      </div>
-      </li>
-      <li class="li-program"><a onclick="return onClickDiv('subli-prog')">Models</a>
-      <div id="subli-prog" class="subli">
-        <ul>
-          <li><a class="{% active request "^/models/" %}" href="/models/">Existing Models</a></li>
-          <li><a class="{% active request "^/model/upload/$" %}" href="/model/upload/">Upload new models</a></li>
-        </ul>
-      </div>
-      </li>
-      <li class="li-task"><a onclick="return onClickDiv('subli-task')">Tasks</a>
-      <div id="subli-task" class="subli">
-        <ul>
-          <li><a class="{% active request "^/tasks/" %}" href="/tasks/">Your tasks</a></li>
-          <li><a class="{% active request "^/task/(submit|new)/" %}" href="/task/submit/">Submit new tasks</a></li>
-        </ul>
-      </div>
-      </li>
-    </ul>
-    </div>
-  </aside>
-
-  <div class="main">
-  {% block content %}{% endblock %}
-  </div>
-
-  {% else %}
-
-  <div class="module">
-  {% block module %}
-    <div class="welcome">
-      <div id="myCarousel" class="carousel slide">
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <div class="active item"><img align="middle" src="/images/circos-aq.jpg"></div>
-          <div class="item"><img align="middle" src="/images/circos-car-purchase.png"></div>
-          <div class="item"><img align="middle" src="/images/human-fly.jpg"></div>
+  <div id="introduction">
+    <div class="intro_info">
+      <p><b>Graphical Modeling Lab</b> is a free platform for estimating high-dimensional gaussian graphical models and providing intuitive graph visualizations.</p>
+      <div class="example">
+        <div class="example_hd">Example-1</div>
+        <div class="example_bd">
+          For a scale-free graph (<a href="/datasets/46/">sample_scale-free.csv</a>), the TIGER model gives the following estimation.<br>
+          <img src="/images/sample-scale_free.png" width=100%>
         </div>
-        <!-- Carousel nav -->
-        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        <div style="clear:both"></div>
       </div>
+      <div class="example">
+        <div class="example_hd">Example-2</div>
+        <div class="example_bd">
+          For a hub graph (<a href="/datasets/48">sample_hub.csv</a>), the TIGER model gives the following estimation.<br>
+          <img src="/images/sample-hub.png" width=100%>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+
     </div>
+
     <div style="clear:both"></div>
-    <div class="guide">
-      <a class="signup-link" href="/accounts/register/">
-        <span>Sign up</span>
-      </a>
-      <div class="what">
-        <h3>What is Graphical Model</h3>
-        <p>
-          "Graphical Model is a probabilistic model for which a graph denotes the conditional independence structure between random variables..."
-        </p>
-      </div>
-      <div class="why">
-        <h3>Why use Graphical Model</h3>
-        <p>
-          "By using Graphical Model, one can intuitively see the correlation between variables....."
-        </p>
-      </div>
-    </div>
-  {% endblock %}
   </div>
 
-  {% endif %}
 
-  </div> <!-- div for content -->
-  </div> <!-- div for inner   -->
-
-  {% block footer %}
-
-  <div style="clear:both"></div>
-  <div id="footer">
-    <div class="inner">
-      <div class="mod">
-        <h4>Site</h4>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="mailto:jiangg@princeton.edu">Contact us</a></li>
-        </ul>
-      </div>
-      <div class="mod">
-        <h4>Documentation</h4>
-        <ul>
-          <li><a href="/specification/dataset">Data format</a></li>
-          <li><a href="/specification/model">Model api</a></li>
-        </ul>
-      </div>
-      <p id="copyright">@2012 ORFE.Princeton. All rights reserved.</p>
-      <div style="clear:both"></div>
-    </div>
-  </div>
-
-  {% endblock %}
-
-  {% block visualization %}
-
-  {% endblock %}
-
-  <script src="/medias/js/tab.js" type="text/javascript" language="javascript"></script>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="/medias/bootstrap/js/bootstrap.js" type="text/javascript" language="javascript"></script>
-</body>
-</html>
+{% endblock %}

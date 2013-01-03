@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/medias/css/style.css"/>
   <link rel="stylesheet" type="text/css" href="/medias/css/base.css"/>
   <link rel="stylesheet" type="text/css" href="/medias/css/ForceDirected.css"/>
-  <script src="/medias/js/tab.js" type="text/javascript" language="javascript"></script>
+  <link rel="stylesheet" type="text/css" href="/medias/bootstrap/css/bootstrap.css"/>
 </head>
 <body>
 
@@ -85,7 +85,20 @@
 
   <div class="module">
   {% block module %}
-    <div class="welcome"><img src="/images/welcome.gif"></div>
+    <div class="welcome">
+      <div id="myCarousel" class="carousel slide">
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item"><img align="middle" src="/images/circos-aq.jpg"></div>
+          <div class="item"><img align="middle" src="/images/circos-car-purchase.png"></div>
+          <div class="item"><img align="middle" src="/images/human-fly.jpg"></div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+      </div>
+    </div>
+    <div style="clear:both"></div>
     <div class="guide">
       <a class="signup-link" href="/accounts/register/">
         <span>Sign up</span>
@@ -141,5 +154,8 @@
 
   {% endblock %}
 
+  <script src="/medias/js/tab.js" type="text/javascript" language="javascript"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="/medias/bootstrap/js/bootstrap.js" type="text/javascript" language="javascript"></script>
 </body>
 </html>
