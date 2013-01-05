@@ -35,7 +35,7 @@ while True:
     circos_nodes_path = result_dir + "/circos.nodes"
     circos_links_path = result_dir + "/circos.links"
 
-    visual_command = ("circos", "-conf circos.conf", "-usertext1", circos_nodes_path, "-usertext2", circos_links_path, "-outputdir", result_dir)
+    visual_command = ("circos", "-conf circos.conf", "-usertext1", circos_nodes_path, "-usertext2", circos_links_path, "-outputdir", result_dir, "-silent")
     visual_command = " ".join(visual_command)
 
     visual_result = os.system(visual_command)
