@@ -50,7 +50,7 @@
             <tr>
               <td class="td_prog"><a href="/models/"><b>{{ program.name }}</b></a></td>
               <td>{{ program.owner.username }}</td>
-              <td><textarea rows="2" cols="30" name={{ "options_"|append:program.id }} placeholder="set options here..." autocomplete="off"></textarea></td>
+              <td><textarea rows="2" cols="47" name={{ "options_"|append:program.id }} placeholder="set options here..." autocomplete="off"></textarea></td>
               <td><input type="radio" name="program" value="{{ program.id }}"></td>
             </tr>
           {% endfor %}

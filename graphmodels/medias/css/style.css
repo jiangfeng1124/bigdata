@@ -468,6 +468,7 @@ ul.help-block {
   border-collapse:collapse; 
   border:solid #999; 
   border-width:1px 0 0 1px; 
+  width: 100%;
 }
 
 .tbl_dataset tr, .tbl_program tr, .tbl_task tr {
@@ -556,7 +557,7 @@ td.td_prog a {
 }
 
 #task_access {
-  margin: 10px 0 0 0;
+  margin: 10px 0 10px 0;
   padding: 5px 0 0 0;
 }
 

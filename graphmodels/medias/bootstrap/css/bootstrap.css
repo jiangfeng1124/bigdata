@@ -1067,7 +1067,7 @@ input[type="color"],
 .uneditable-input {
   display: inline-block;
   padding: 4px 6px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   font-size: 14px;
   line-height: 20px;
   color: #555555;
@@ -1080,7 +1080,7 @@ input[type="color"],
 input,
 textarea,
 .uneditable-input {
-  width: 206px;
+  /* width: 206px; */
 }
 
 textarea {
