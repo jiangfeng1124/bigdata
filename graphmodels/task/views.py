@@ -20,7 +20,7 @@ import pickle
 def task_view(request):
   
   user = request.user
-  task_list = Task.objects.filter(Q(owner__id=user.id)).order_by('-id')
+  task_list = Task.objects.filter(Q(owner__id=user.id) | Q(access="public")).order_by('-id')
   return render_to_response("task/view.html", RequestContext(request, {'user': user, 'task_list': task_list}))
 
 @login_required
