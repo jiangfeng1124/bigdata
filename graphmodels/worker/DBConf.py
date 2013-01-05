@@ -1,4 +1,4 @@
 USERNAME = "root"
-PASSWD= ""
+PASSWD= "jiangfeng"
 HOST = "localhost"
-DATABASE = "mydb"
+DATABASE = "graphdb"

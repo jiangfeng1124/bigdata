@@ -39,7 +39,7 @@ def task_info(request, offset):
     return render_to_response('task/view.html', RequestContext(request, {'user': user, 'task_list': task_list, 'notice': notice}))
 
   task = task[0]
-  if task.progress != "processed":
+  if task.progress != "visualized":
     return render_to_response('task/info.html', RequestContext(request, {'task': task, 'status': "0"}))
 
   data_path = os.path.join(settings.USR_RESULT_ROOT)
@@ -55,7 +55,9 @@ def task_info(request, offset):
   degree_tbl = pickle.load(f_degree)
 
   result_graph = os.path.join("/result", str(task_id), "graph.png")
-  return render_to_response('task/info.html', RequestContext(request, {'task': task, 'status': "1", 'result_graph': result_graph, 'graph_json_data': graph_json_data, 'degree_tbl': degree_tbl, 'icov_json_data': icov_json_data}))
+  circos_png = os.path.join("/result", str(task_id), "circos.png")
+  circos_svg = os.path.join("/result", str(task_id), "circos.svg")
+  return render_to_response('task/info.html', RequestContext(request, {'task': task, 'status': "1", 'result_graph': result_graph, 'circos_png': circos_png, 'circos_svg': circos_svg, 'graph_json_data': graph_json_data, 'degree_tbl': degree_tbl, 'icov_json_data': icov_json_data}))
 
 def task_submit(request):
 

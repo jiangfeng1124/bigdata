@@ -1,0 +1,16 @@
+hs1 0 1 hs2 0 1
+hs1 0 1 hs3 0 1
+hs1 0 1 hs5 0 1
+hs1 0 1 hs6 0 1
+hs2 0 1 hs3 0 1
+hs2 0 1 hs7 0 1
+hs2 0 1 hs8 0 1
+hs3 0 1 hs6 0 1
+hs3 0 1 hs7 0 1
+hs3 0 1 hs8 0 1
+hs4 0 1 hs5 0 1
+hs4 0 1 hs6 0 1
+hs4 0 1 hs7 0 1
+hs5 0 1 hs7 0 1
+hs5 0 1 hs8 0 1
+hs7 0 1 hs8 0 1

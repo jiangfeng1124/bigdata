@@ -1,0 +1,8 @@
+chr - hs1 length 0 1 chr1
+chr - hs2 diameter 0 1 chr2
+chr - hs3 height 0 1 chr3
+chr - hs4 whole_weight 0 1 chr4
+chr - hs5 shucked_weight 0 1 chr5
+chr - hs6 viscera_weight 0 1 chr6
+chr - hs7 shell_weight 0 1 chr7
+chr - hs8 rings 0 1 chr8

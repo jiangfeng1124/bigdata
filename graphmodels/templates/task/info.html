@@ -66,6 +66,7 @@
   <div id="visual_hd">
     <ul> 
       <li id="graph_tab"><a href="" class="on" onclick="switchVisTab('graph_tab', 'graph_vis'); this.blur(); return false;">Graph</a></li>
+      <li id="circos_tab"><a href="" onclick="switchVisTab('circos_tab', 'circos_vis'); this.blur(); return false;">Circos</a></li>
       <li id="degree_tab"><a href="" onclick="switchVisTab('degree_tab', 'degree_vis'); this.blur(); return false;">Degree</a></li>
       <li id="icov_tab"><a href="" onclick="switchVisTab('icov_tab', 'icov_vis'); this.blur(); return false;">ICov</a></li>
     </ul>
@@ -86,6 +87,12 @@
         <div style="clear:both"></div>
     </div>
 
+    <div style="clear:both"></div>
+  </div>
+
+  <div id="circos_vis" style="display: none;">
+    <!-- <object data="{{ circos_svg }}" type="image/svg+xml" codebase="http://www.savarese.com/software/svgplugin/"></object> -->
+    <img src="{{ circos_svg }}" width="600px" height="600px">
     <div style="clear:both"></div>
   </div>
 
@@ -130,20 +137,20 @@
     var options = {'showRowNumber': true};
     function drawVisualization() {
       // Create and populate the data table.
-      var myDataAsJson = 
-      {
-        "cols": [
-          {"id":"A", "label":"Node1", "type":"string"},
-          {"id":"B", "label":"Node2", "type":"string"},
-          {"id":"C", "label":"Partial Correlation", "type":"number"}
-        ],
-        "rows": [
-          {"c": [{"v":"V1"}, {"v":"V2"}, {"v":0.45}]},
-          {"c": [{"v":"V1"}, {"v":"V3"}, {"v":0.55}]},
-          {"c": [{"v":"V2"}, {"v":"V3"}, {"v":0.35}]},
-          {"c": [{"v":"V2"}, {"v":"V1"}, {"v":0.65}]}
-        ]
-      };
+      // var myDataAsJson = 
+      // {
+      //   "cols": [
+      //     {"id":"A", "label":"Node1", "type":"string"},
+      //     {"id":"B", "label":"Node2", "type":"string"},
+      //     {"id":"C", "label":"Partial Correlation", "type":"number"}
+      //   ],
+      //   "rows": [
+      //     {"c": [{"v":"V1"}, {"v":"V2"}, {"v":0.45}]},
+      //     {"c": [{"v":"V1"}, {"v":"V3"}, {"v":0.55}]},
+      //     {"c": [{"v":"V2"}, {"v":"V3"}, {"v":0.35}]},
+      //     {"c": [{"v":"V2"}, {"v":"V1"}, {"v":0.65}]}
+      //   ]
+      // };
 
       var icovDataAsJson = JSON.parse('{{ icov_json_data|safe }}');
       icovData = new google.visualization.DataTable(icovDataAsJson);

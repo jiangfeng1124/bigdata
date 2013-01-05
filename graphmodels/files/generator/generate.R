@@ -1,6 +1,6 @@
 suppressPackageStartupMessages(library(bigmatrix))
 
-types <- c("hub", "scale-free", "cluster", "band", "block", "random")
+types <- c("hub", "scale-free", "cluster", "band", "random")
 
 for(type in types) {
   L <- tiger.generator(n = 200, d = 50, graph = type, prob = 0.5)

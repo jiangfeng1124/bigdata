@@ -14,10 +14,10 @@ function switchTab(ProTag, ProBox) {
 }
 
 function switchVisTab(ProTag, ProBox) {
-    var tabs = new Array("degree_tab", "graph_tab", "icov_tab");
-    var viss = new Array("degree_vis", "graph_vis", "icov_vis");
+    var tabs = new Array("degree_tab", "graph_tab", "circos_tab", "icov_tab");
+    var viss = new Array("degree_vis", "graph_vis", "circos_vis", "icov_vis");
 
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 4; i++) {
         if (tabs[i] == ProTag) {
             document.getElementById(ProTag).getElementsByTagName("a")[0].className = "on";
         } else {

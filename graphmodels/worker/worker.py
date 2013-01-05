@@ -90,6 +90,11 @@ while True:
       degree_path = result_dir + "/graph.degree"
       f_degree = open(degree_path, "w")
 
+      circos_nodes_path = result_dir + "/circos.nodes"
+      f_circos_nodes = open(circos_nodes_path, "w")
+      circos_links_path = result_dir + "/circos.links"
+      f_circos_links = open(circos_links_path, "w")
+
       nodenames = []
       if data_header == 1:
         nodenames = f_mat.readline().strip().split()
@@ -98,6 +103,12 @@ while True:
         for i in range(1, dim+1):
           nodenames.append("V"+str(i))
         f_mat.seek(0) # return to the beginning
+
+      # write nodes info(ideograms) to "circos.nodes"
+      for i in range(0, len(nodenames)):
+        node_info = "chr - hs" + str(i+1) + " " + nodenames[i] + " 0 1 chr" + str((i+1)%24) + "\n"
+        f_circos_nodes.write(node_info) 
+      f_circos_nodes.close()
 
       graph_json = []
       degree_info = {}
@@ -148,10 +159,15 @@ while True:
 
             icov_json["rows"].append(icov_json_row)
 
+            # add a circos link
+            link_info = "hs" + str(i+1) + " 0 1 hs" + str(col+1) + " 0 1\n"
+            f_circos_links.write(link_info)
 
         node["adjacencies"] = node_adjacencies
         graph_json.append(node)
         i += 1
+
+      f_circos_links.close()
 
       simplejson.dump(graph_json, f_graph_json, indent="\t")
       f_graph_json.close()

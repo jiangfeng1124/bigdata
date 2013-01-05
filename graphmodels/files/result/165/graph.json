@@ -214,15 +214,7 @@
 		"name": "V13"
 	},
 	{
-		"adjacencies": [
-			{
-				"nodeTo": "V15",
-				"nodeFrom": "V14",
-				"data": {
-					"$color": "#557EAA"
-				}
-			}
-		],
+		"adjacencies": [],
 		"data": {
 			"$type": "circle",
 			"$dim": 5,
