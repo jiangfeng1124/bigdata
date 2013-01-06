@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
 }
 
@@ -23,7 +24,7 @@ body {
 }
 
 .aside {
-  width: 320px;
+  width: 280px;
   margin-right: 30px;
   margin-bottom: 20px;
   background: #F2F2F2;
@@ -72,7 +73,7 @@ ul {
 
 .li-dataset, .li-program, .li-task {
   padding: 10px 5px 5px 1em;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .li-dataset, .li-program {
@@ -82,7 +83,7 @@ ul {
 .subli {
   margin-left: 15px;
   padding: 5px;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .subli li {
@@ -91,16 +92,16 @@ ul {
 
 .aside .info li a {
   color: gray;
+  display: block;
 }
 
-.subli li a:hover, .subli li a:visited {
-  color: black;
-  font-weight: 700;
+.subli li a:hover {
   text-decoration: none;
+  background-color: #EEE;
 } 
 
 .current_view {
-  color: black;
+  color: black !important;
   font-weight: 700;
   text-decoration: none;
 }
@@ -440,11 +441,11 @@ ul.help-block {
 }
 
 .main {
-  width: 640px;
+  width: 680px;
 }
 
 .google-visualization-table-table {
-  width: 640px;
+  width: 680px;
 }
 
 .aside, .main {
@@ -452,7 +453,7 @@ ul.help-block {
 }
 
 #datasets {
-  width: 630px;
+  width: 670px;
   padding-left: 10px;
   float: left;
   min-height: 300px;
@@ -557,12 +558,12 @@ td.td_prog a {
 }
 
 #task_access {
-  margin: 10px 0 10px 0;
+  margin: 10px 0 0px 0;
   padding: 5px 0 0 0;
 }
 
 #models {
-  width: 630px;
+  width: 670px;
   padding-left: 10px;
   float: left;
   min-height: 300px;
@@ -652,7 +653,7 @@ h4 {
 }
 
 #tasks {
-  width: 630px;
+  width: 670px;
   padding-left: 10px;
   float: left;
   min-height: 300px;
@@ -664,7 +665,7 @@ h4 {
   border: 3px solid gray; 
   border-radius: 10px;
   float: right;
-  width: 630px;
+  width: 670px;
   height: 400px;
   text-align: center;
   box-shadow: 2px 10px 50px #888888;
@@ -675,6 +676,10 @@ h4 {
   color:#ccc;
   height: 620px;
   text-align: left;
+}
+
+#circos_vis {
+  text-align: center;
 }
 
 #visualization ul, #visualization li {
@@ -734,6 +739,7 @@ h4 {
 .prog_box {
   border: 1px dotted gray;
   margin-left: 10px;
+  margin-bottom: 20px;
   padding: 10px;
 }
 

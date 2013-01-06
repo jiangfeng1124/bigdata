@@ -48,8 +48,8 @@
     <a href="/accounts/profile" class="profile-link">View your profile</a>
     </header>
     <div class="info">
-    <ul>
-      <li class="li-dataset"><a onclick="return onClickDiv('subli-ds');">Datasets</a>
+    <ul class="nav nav-list">
+      <li class="li-dataset">Datasets
       <div id="subli-ds" class="subli">
         <ul>
           <li><a class="{% active request "^/datasets/" %}" href="/datasets/">Existing datasets</a></li>
@@ -57,7 +57,7 @@
         </ul>
       </div>
       </li>
-      <li class="li-program"><a onclick="return onClickDiv('subli-prog')">Models</a>
+      <li class="li-program">Models
       <div id="subli-prog" class="subli">
         <ul>
           <li><a class="{% active request "^/models/" %}" href="/models/">Existing Models</a></li>
@@ -65,7 +65,8 @@
         </ul>
       </div>
       </li>
-      <li class="li-task"><a onclick="return onClickDiv('subli-task')">Tasks</a>
+      <!-- <li class="li-task"><a onclick="return onClickDiv('subli-task')">Tasks</a> -->
+      <li class="li-task">Tasks
       <div id="subli-task" class="subli">
         <ul>
           <li><a class="{% active request "^/tasks/" %}" href="/tasks/">Your tasks</a></li>
