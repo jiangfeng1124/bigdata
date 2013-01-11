@@ -547,7 +547,7 @@ CREATE TABLE `task_task` (
 
 LOCK TABLES `task_task` WRITE;
 /*!40000 ALTER TABLE `task_task` DISABLE KEYS */;
-INSERT INTO `task_task` VALUES (164,1,46,4,'2012-12-14 02:28:26','processed','164','','public'),(165,1,47,4,'2012-12-14 02:34:03','processed','165','','public'),(166,1,48,4,'2012-12-14 02:36:55','processed','166','','public'),(167,1,50,4,'2012-12-14 02:38:04','processed','167','','public'),(168,1,49,4,'2012-12-14 02:47:36','processed','168','','public');
+INSERT INTO `task_task` VALUES (164,1,46,4,'2012-12-14 02:28:26','visualized','164','','public'),(165,1,47,4,'2012-12-14 02:34:03','visualized','165','','public'),(166,1,48,4,'2012-12-14 02:36:55','visualized','166','','public'),(167,1,50,4,'2012-12-14 02:38:04','visualized','167','','public'),(168,1,49,4,'2012-12-14 02:47:36','visualized','168','','public');
 /*!40000 ALTER TABLE `task_task` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
