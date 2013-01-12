@@ -13,5 +13,6 @@ INSTALL
 6. install R and required R packages: `huge`, `optparse`, `bigmatrix`
 7. create a MySQL database named `graphdb`, initialize it using `graphdb.sql`
 8. change the owner and group for the `files/*` directory.
+
     chown www-data files -R
     chgrp www-data files -R
