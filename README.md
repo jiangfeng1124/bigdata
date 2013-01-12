@@ -1,6 +1,8 @@
 bigdata
 =======
 
+Description
+-------
 Bigdata is currently a platform for graphical modeling and will support regression analysising in the future.
 
 INSTALL
