@@ -2,11 +2,11 @@ bigdata
 =======
 
 Description
--------
+---
 Bigdata is currently a platform for graphical modeling and will support regression analysising in the future.
 
 INSTALL
--------
+---
 1. git clone https://github.com/jiangfeng1124/bigdata.git
 2. install `django`
 3. install `python-mysqldb`
