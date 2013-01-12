@@ -108,7 +108,7 @@ def vis_upload(request):
 
       notice = "Congratulations! Your dataset has been successfully uploaded."
       # return render_to_response('dataset/success.html', RequestContext(request, {'dataset': new_dataset, 'notice': notice}))
-      return HttpResponseRedirect('/vis/%s/' % new_vis.id)
+      return HttpResponseRedirect('/viss/%s/' % new_vis.id)
 
     else:
       notice = "You must be logged in to upload datasets"
