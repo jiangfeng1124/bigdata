@@ -106,7 +106,7 @@ CREATE TABLE `auth_permission` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `content_type_id` (`content_type_id`,`codename`),
   KEY `auth_permission_1bb8f392` (`content_type_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -115,7 +115,7 @@ CREATE TABLE `auth_permission` (
 
 LOCK TABLES `auth_permission` WRITE;
 /*!40000 ALTER TABLE `auth_permission` DISABLE KEYS */;
-INSERT INTO `auth_permission` VALUES (1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(10,'Can add message',4,'add_message'),(11,'Can change message',4,'change_message'),(12,'Can delete message',4,'delete_message'),(13,'Can add content type',5,'add_contenttype'),(14,'Can change content type',5,'change_contenttype'),(15,'Can delete content type',5,'delete_contenttype'),(16,'Can add session',6,'add_session'),(17,'Can change session',6,'change_session'),(18,'Can delete session',6,'delete_session'),(19,'Can add publisher',7,'add_publisher'),(20,'Can change publisher',7,'change_publisher'),(21,'Can delete publisher',7,'delete_publisher'),(22,'Can add author',8,'add_author'),(23,'Can change author',8,'change_author'),(24,'Can delete author',8,'delete_author'),(25,'Can add book',9,'add_book'),(26,'Can change book',9,'change_book'),(27,'Can delete book',9,'delete_book'),(28,'Can add log entry',10,'add_logentry'),(29,'Can change log entry',10,'change_logentry'),(30,'Can delete log entry',10,'delete_logentry'),(31,'Can add site',11,'add_site'),(32,'Can change site',11,'change_site'),(33,'Can delete site',11,'delete_site'),(34,'Can add dataset',12,'add_dataset'),(35,'Can change dataset',12,'change_dataset'),(36,'Can delete dataset',12,'delete_dataset'),(37,'Can add program',13,'add_program'),(38,'Can change program',13,'change_program'),(39,'Can delete program',13,'delete_program'),(40,'Can add task',14,'add_task'),(41,'Can change task',14,'change_task'),(42,'Can delete task',14,'delete_task');
+INSERT INTO `auth_permission` VALUES (1,'Can add permission',1,'add_permission'),(2,'Can change permission',1,'change_permission'),(3,'Can delete permission',1,'delete_permission'),(4,'Can add group',2,'add_group'),(5,'Can change group',2,'change_group'),(6,'Can delete group',2,'delete_group'),(7,'Can add user',3,'add_user'),(8,'Can change user',3,'change_user'),(9,'Can delete user',3,'delete_user'),(44,'Can change v dataset',15,'change_vdataset'),(43,'Can add v dataset',15,'add_vdataset'),(13,'Can add content type',5,'add_contenttype'),(14,'Can change content type',5,'change_contenttype'),(15,'Can delete content type',5,'delete_contenttype'),(16,'Can add session',6,'add_session'),(17,'Can change session',6,'change_session'),(18,'Can delete session',6,'delete_session'),(19,'Can add publisher',7,'add_publisher'),(20,'Can change publisher',7,'change_publisher'),(21,'Can delete publisher',7,'delete_publisher'),(22,'Can add author',8,'add_author'),(23,'Can change author',8,'change_author'),(24,'Can delete author',8,'delete_author'),(25,'Can add book',9,'add_book'),(26,'Can change book',9,'change_book'),(27,'Can delete book',9,'delete_book'),(28,'Can add log entry',10,'add_logentry'),(29,'Can change log entry',10,'change_logentry'),(30,'Can delete log entry',10,'delete_logentry'),(31,'Can add site',11,'add_site'),(32,'Can change site',11,'change_site'),(33,'Can delete site',11,'delete_site'),(34,'Can add dataset',12,'add_dataset'),(35,'Can change dataset',12,'change_dataset'),(36,'Can delete dataset',12,'delete_dataset'),(37,'Can add program',13,'add_program'),(38,'Can change program',13,'change_program'),(39,'Can delete program',13,'delete_program'),(40,'Can add task',14,'add_task'),(41,'Can change task',14,'change_task'),(42,'Can delete task',14,'delete_task'),(45,'Can delete v dataset',15,'delete_vdataset'),(46,'Can add v task',16,'add_vtask'),(47,'Can change v task',16,'change_vtask'),(48,'Can delete v task',16,'delete_vtask'),(49,'Can add vis',17,'add_vis'),(50,'Can change vis',17,'change_vis'),(51,'Can delete vis',17,'delete_vis');
 /*!40000 ALTER TABLE `auth_permission` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -149,7 +149,7 @@ CREATE TABLE `auth_user` (
 
 LOCK TABLES `auth_user` WRITE;
 /*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
-INSERT INTO `auth_user` VALUES (1,'jiangfeng','','','jiangfeng1124@gmail.com','pbkdf2_sha256$10000$kUrmu5VRECan$2EHS+PPnJ9G2TrofXhCvqSYhHnmsE1bKI/U9WKOuSCA=',1,1,1,'2012-12-22 15:58:16','2012-11-08 21:05:28'),(2,'huhupao','','','','sha1$b8bac$5954c1025b5d659d23cafa18c9a1d7b4bf41a586',0,1,0,'2012-11-10 14:19:05','2012-11-09 16:57:38'),(3,'car','','','','pbkdf2_sha256$10000$TNGutjhk4N8d$deYvG1v6X9vdPtwW5bCJH+7rDYgefnnc0xaBRGDOhcA=',0,1,0,'2012-12-13 19:14:44','2012-11-10 14:42:59'),(4,'han','','','','sha1$6897c$9f17128093306f4479d54630c72f4b4d13a63709',0,1,0,'2012-12-06 23:31:19','2012-11-10 14:44:34'),(5,'susu','','','','sha1$bd926$7bdd5a0bcb8f632cfe06c8d945ba13eeb454270d',0,1,0,'2012-11-10 14:52:01','2012-11-10 14:52:01'),(6,'mlkid','','','','sha1$af8e7$8f7e3b7ef932f79fba0655379e3e08e4b3d3cc4d',0,1,0,'2012-11-10 14:57:30','2012-11-10 14:57:30'),(7,'princeton','','','','pbkdf2_sha256$10000$BrlUA5uC9d3Y$btu7n238QPZLqAzG1u/dq58NWrEyDQB28cg9TvkbO40=',0,1,0,'2012-12-13 19:16:22','2012-11-10 15:01:23'),(8,'campus','','','','sha1$d6b8f$72ed386cc65aa25b89ebc3d1c2b00895acbd232c',0,1,0,'2012-11-10 15:02:18','2012-11-10 15:02:18'),(9,'vicky','','','','sha1$859e5$bc12c05d59bc4b61c94f0fb53950e7396f00a487',0,1,0,'2012-11-10 15:03:00','2012-11-10 15:03:00'),(10,'fan','','','','sha1$5ae0b$42a205dbfaf786906ff25089e41776b256f27602',0,1,0,'2012-11-27 17:32:29','2012-11-27 17:32:29'),(11,'orfe','','','','pbkdf2_sha256$10000$ayzbNCUDTwYc$nyPzqlSQ0fwzuMO/434utnDTK+YIThNMSC3u57dVmbw=',0,1,0,'2012-12-13 19:17:15','2012-12-13 19:17:15'),(12,'fanghan','','','','pbkdf2_sha256$10000$iKtF7ULGdxsx$Ksj5J/EIU9WC4Bad+7E3/NRwDrYmiEbHF5McjlfK+pk=',0,1,0,'2012-12-14 02:56:09','2012-12-14 02:56:09'),(13,'hanliu','','','','pbkdf2_sha256$10000$5U57yC4UTMyW$CHC5w3nZvPXnLZYbINKY4PCrhtWzga/kTIkhCe0Bonw=',0,1,0,'2012-12-14 02:56:15','2012-12-14 02:56:15'),(14,'tourzhao','','','','pbkdf2_sha256$10000$H0fqb4xPM39m$uYXM6zIgHXTVe9TSVIWbBsjv5zRJxe1o+ZyBuxuoK50=',0,1,0,'2012-12-14 03:16:10','2012-12-14 03:16:10'),(15,'shww','','','','pbkdf2_sha256$10000$EivxtTRc28lX$/ObBFv/VvGPTvS6j1Eb+X8M0+4mEoTghOYVJzBC3o3U=',0,1,0,'2012-12-14 06:18:15','2012-12-14 06:18:15');
+INSERT INTO `auth_user` VALUES (1,'jiangfeng','','','jiangfeng1124@gmail.com','pbkdf2_sha256$10000$kUrmu5VRECan$2EHS+PPnJ9G2TrofXhCvqSYhHnmsE1bKI/U9WKOuSCA=',1,1,1,'2013-01-12 08:15:38','2012-11-08 21:05:28'),(2,'huhupao','','','','sha1$b8bac$5954c1025b5d659d23cafa18c9a1d7b4bf41a586',0,1,0,'2012-11-10 14:19:05','2012-11-09 16:57:38'),(3,'car','','','','pbkdf2_sha256$10000$TNGutjhk4N8d$deYvG1v6X9vdPtwW5bCJH+7rDYgefnnc0xaBRGDOhcA=',0,1,0,'2012-12-13 19:14:44','2012-11-10 14:42:59'),(4,'han','','','','sha1$6897c$9f17128093306f4479d54630c72f4b4d13a63709',0,1,0,'2012-12-06 23:31:19','2012-11-10 14:44:34'),(5,'susu','','','','sha1$bd926$7bdd5a0bcb8f632cfe06c8d945ba13eeb454270d',0,1,0,'2012-11-10 14:52:01','2012-11-10 14:52:01'),(6,'mlkid','','','','sha1$af8e7$8f7e3b7ef932f79fba0655379e3e08e4b3d3cc4d',0,1,0,'2012-11-10 14:57:30','2012-11-10 14:57:30'),(7,'princeton','','','','pbkdf2_sha256$10000$BrlUA5uC9d3Y$btu7n238QPZLqAzG1u/dq58NWrEyDQB28cg9TvkbO40=',0,1,0,'2012-12-13 19:16:22','2012-11-10 15:01:23'),(8,'campus','','','','sha1$d6b8f$72ed386cc65aa25b89ebc3d1c2b00895acbd232c',0,1,0,'2012-11-10 15:02:18','2012-11-10 15:02:18'),(9,'vicky','','','','sha1$859e5$bc12c05d59bc4b61c94f0fb53950e7396f00a487',0,1,0,'2012-11-10 15:03:00','2012-11-10 15:03:00'),(10,'fan','','','','sha1$5ae0b$42a205dbfaf786906ff25089e41776b256f27602',0,1,0,'2012-11-27 17:32:29','2012-11-27 17:32:29'),(11,'orfe','','','','pbkdf2_sha256$10000$ayzbNCUDTwYc$nyPzqlSQ0fwzuMO/434utnDTK+YIThNMSC3u57dVmbw=',0,1,0,'2012-12-13 19:17:15','2012-12-13 19:17:15'),(12,'fanghan','','','','pbkdf2_sha256$10000$iKtF7ULGdxsx$Ksj5J/EIU9WC4Bad+7E3/NRwDrYmiEbHF5McjlfK+pk=',0,1,0,'2012-12-14 02:56:09','2012-12-14 02:56:09'),(13,'hanliu','','','','pbkdf2_sha256$10000$5U57yC4UTMyW$CHC5w3nZvPXnLZYbINKY4PCrhtWzga/kTIkhCe0Bonw=',0,1,0,'2012-12-14 02:56:15','2012-12-14 02:56:15'),(14,'tourzhao','','','','pbkdf2_sha256$10000$H0fqb4xPM39m$uYXM6zIgHXTVe9TSVIWbBsjv5zRJxe1o+ZyBuxuoK50=',0,1,0,'2012-12-14 03:16:10','2012-12-14 03:16:10'),(15,'shww','','','','pbkdf2_sha256$10000$EivxtTRc28lX$/ObBFv/VvGPTvS6j1Eb+X8M0+4mEoTghOYVJzBC3o3U=',0,1,0,'2012-12-14 06:18:15','2012-12-14 06:18:15');
 /*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -419,7 +419,7 @@ CREATE TABLE `django_content_type` (
   `model` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `app_label` (`app_label`,`model`)
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -428,7 +428,7 @@ CREATE TABLE `django_content_type` (
 
 LOCK TABLES `django_content_type` WRITE;
 /*!40000 ALTER TABLE `django_content_type` DISABLE KEYS */;
-INSERT INTO `django_content_type` VALUES (1,'permission','auth','permission'),(2,'group','auth','group'),(3,'user','auth','user'),(4,'message','auth','message'),(5,'content type','contenttypes','contenttype'),(6,'session','sessions','session'),(7,'publisher','books','publisher'),(8,'author','books','author'),(9,'book','books','book'),(10,'log entry','admin','logentry'),(11,'site','sites','site'),(12,'dataset','dataset','dataset'),(13,'program','program','program'),(14,'task','task','task');
+INSERT INTO `django_content_type` VALUES (1,'permission','auth','permission'),(2,'group','auth','group'),(3,'user','auth','user'),(15,'v dataset','vdataset','vdataset'),(5,'content type','contenttypes','contenttype'),(6,'session','sessions','session'),(7,'publisher','books','publisher'),(8,'author','books','author'),(9,'book','books','book'),(10,'log entry','admin','logentry'),(11,'site','sites','site'),(12,'dataset','dataset','dataset'),(13,'program','program','program'),(14,'task','task','task'),(16,'v task','vtask','vtask'),(17,'vis','vis','vis');
 /*!40000 ALTER TABLE `django_content_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -454,7 +454,7 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('100769982be95df1bb47cc2b2026dafd','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-11-22 21:56:27'),('9b05497f64f7ed1543ab17488f3517b3','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-12-22 14:50:44'),('1bad18e5838e95af233cf0ae92063ab4','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-12-23 20:47:47'),('ec9426d31c31f0136b791ce5c47786c0','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-12-26 23:15:48'),('7050e854585b9dc5579f227b64fccf94','NTIyYmZhNTE5OGY5NDMzMTRiMmViYjAzZWM2NTFkOGMwYjk4NzgzZjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQ91Lg==\n','2012-12-28 06:18:15'),('0c95d6087c786b1811626bfd73d8eddb','NjRiZDY0M2YzYTc4YTc0MDI0ZGYwZTNlYzQ4MDE4MmRmZDZlMDk2YTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQ51Lg==\n','2012-12-28 03:16:10'),('1f28b057093d2bc63dd7fff34f97e2f8','ZWEwMDU0ZDZhYjdjOWY3ZWQ2ZGMzMjhiNDBmMDkwNjBlMzkwOWViYjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==\n','2012-12-27 19:14:44'),('530becad967b9f69be601ba4b953770a','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-12-27 18:44:45'),('918eab944e97aaf54828243ed53fd117','NDE3ZTY1ZmZhM2I0MDA0MTdlNzk4Mjc1ODAzYTI0MjQ0OTMwYzM1MzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQx1Lg==\n','2012-12-28 02:56:09'),('87fdf23b562a1f8c5194a90471914699','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2013-01-05 15:58:16'),('dee14b914c00c578abcef9b4266b02f3','MGFmNzJjZGI5MmFmZmZkZjJjMTMyNGE0YTc0MmJmOGIyNWY4MGZjNzqAAn1xAShVCnRlc3Rjb29r\naWVVBndvcmtlZFUSX2F1dGhfdXNlcl9iYWNrZW5kcQJVKWRqYW5nby5jb250cmliLmF1dGguYmFj\na2VuZHMuTW9kZWxCYWNrZW5kcQNVDV9hdXRoX3VzZXJfaWRxBIoBDXUu\n','2012-12-28 02:56:15'),('f805b7db661a200ec0e93513f077aaf2','MjM1OGU5OTdhNWUyZmVhOGJjZTljZGI0NTY0YTIwNDFjNzgwMjg1NjqAAn1xAVUKdGVzdGNvb2tp\nZXECVQZ3b3JrZWRxA3Mu\n','2012-12-31 18:54:16'),('ff70cd2c735ea1c5596dc29d1f7037d9','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2013-01-01 00:00:21'),('ab6475df9384414bf274e872a80ad925','MjM1OGU5OTdhNWUyZmVhOGJjZTljZGI0NTY0YTIwNDFjNzgwMjg1NjqAAn1xAVUKdGVzdGNvb2tp\nZXECVQZ3b3JrZWRxA3Mu\n','2013-01-01 17:45:14');
+INSERT INTO `django_session` VALUES ('100769982be95df1bb47cc2b2026dafd','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-11-22 21:56:27'),('9b05497f64f7ed1543ab17488f3517b3','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-12-22 14:50:44'),('1bad18e5838e95af233cf0ae92063ab4','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-12-23 20:47:47'),('ec9426d31c31f0136b791ce5c47786c0','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-12-26 23:15:48'),('7050e854585b9dc5579f227b64fccf94','NTIyYmZhNTE5OGY5NDMzMTRiMmViYjAzZWM2NTFkOGMwYjk4NzgzZjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQ91Lg==\n','2012-12-28 06:18:15'),('0c95d6087c786b1811626bfd73d8eddb','NjRiZDY0M2YzYTc4YTc0MDI0ZGYwZTNlYzQ4MDE4MmRmZDZlMDk2YTqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQ51Lg==\n','2012-12-28 03:16:10'),('1f28b057093d2bc63dd7fff34f97e2f8','ZWEwMDU0ZDZhYjdjOWY3ZWQ2ZGMzMjhiNDBmMDkwNjBlMzkwOWViYjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQN1Lg==\n','2012-12-27 19:14:44'),('530becad967b9f69be601ba4b953770a','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2012-12-27 18:44:45'),('918eab944e97aaf54828243ed53fd117','NDE3ZTY1ZmZhM2I0MDA0MTdlNzk4Mjc1ODAzYTI0MjQ0OTMwYzM1MzqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQx1Lg==\n','2012-12-28 02:56:09'),('87fdf23b562a1f8c5194a90471914699','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2013-01-05 15:58:16'),('dee14b914c00c578abcef9b4266b02f3','MGFmNzJjZGI5MmFmZmZkZjJjMTMyNGE0YTc0MmJmOGIyNWY4MGZjNzqAAn1xAShVCnRlc3Rjb29r\naWVVBndvcmtlZFUSX2F1dGhfdXNlcl9iYWNrZW5kcQJVKWRqYW5nby5jb250cmliLmF1dGguYmFj\na2VuZHMuTW9kZWxCYWNrZW5kcQNVDV9hdXRoX3VzZXJfaWRxBIoBDXUu\n','2012-12-28 02:56:15'),('f805b7db661a200ec0e93513f077aaf2','MjM1OGU5OTdhNWUyZmVhOGJjZTljZGI0NTY0YTIwNDFjNzgwMjg1NjqAAn1xAVUKdGVzdGNvb2tp\nZXECVQZ3b3JrZWRxA3Mu\n','2012-12-31 18:54:16'),('ff70cd2c735ea1c5596dc29d1f7037d9','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2013-01-01 00:00:21'),('ab6475df9384414bf274e872a80ad925','MjM1OGU5OTdhNWUyZmVhOGJjZTljZGI0NTY0YTIwNDFjNzgwMjg1NjqAAn1xAVUKdGVzdGNvb2tp\nZXECVQZ3b3JrZWRxA3Mu\n','2013-01-01 17:45:14'),('164d9204883c1661809ed802bdb9e903','MGMxYThiZTMzNzNkYzEzYjExZDJhNjYwZThkODllMTI4YTVmZDY3MjqAAn1xAShVEl9hdXRoX3Vz\nZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHED\nVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg==\n','2013-01-26 08:15:38');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -550,6 +550,40 @@ LOCK TABLES `task_task` WRITE;
 INSERT INTO `task_task` VALUES (164,1,46,4,'2012-12-14 02:28:26','visualized','164','','public'),(165,1,47,4,'2012-12-14 02:34:03','visualized','165','','public'),(166,1,48,4,'2012-12-14 02:36:55','visualized','166','','public'),(167,1,50,4,'2012-12-14 02:38:04','visualized','167','','public'),(168,1,49,4,'2012-12-14 02:47:36','visualized','168','','public');
 /*!40000 ALTER TABLE `task_task` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `vis_vis`
+--
+
+DROP TABLE IF EXISTS `vis_vis`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `vis_vis` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `owner_id` int(11) NOT NULL,
+  `data_path` varchar(200) NOT NULL,
+  `data_name` varchar(50) NOT NULL,
+  `data_description` varchar(200) NOT NULL,
+  `data_dim` int(11) NOT NULL,
+  `data_sep` varchar(10) NOT NULL,
+  `data_header` tinyint(1) NOT NULL,
+  `create_date` datetime NOT NULL,
+  `progress` varchar(20) NOT NULL,
+  `result_dir` varchar(200) NOT NULL,
+  `access` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `vis_vis`
+--
+
+LOCK TABLES `vis_vis` WRITE;
+/*!40000 ALTER TABLE `vis_vis` DISABLE KEYS */;
+INSERT INTO `vis_vis` VALUES (1,1,'jiangfeng/sample_d50.mat','sample_d50.mat','It is a sample matrix of 50 variables.',50,'tab',0,'2013-01-12 10:18:23','visualized','1','public');
+/*!40000 ALTER TABLE `vis_vis` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -560,4 +594,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-12-28 16:49:10
+-- Dump completed on 2013-01-12 19:36:43
