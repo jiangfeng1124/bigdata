@@ -19,7 +19,7 @@ while True:
 
   time.sleep(1)
 
-  query_task = 'SELECT * FROM task_task where progress="processed" ORDER BY create_date'
+  query_task = 'SELECT * FROM vis_vis where progress="processed" ORDER BY create_date'
   cursor.execute(query_task)
 
   tasks_to_visualize = cursor.fetchall()
@@ -28,11 +28,11 @@ while True:
   for i in range(0, n):
     
     task_id = tasks_to_visualize[i][0]
-    update_task = 'UPDATE task_task SET progress="visualizing" where id=' + str(task_id)
+    update_task = 'UPDATE vis_vis SET progress="visualizing" where id=' + str(task_id)
     cursor.execute(update_task)
     print "Visualizing task#", task_id
 
-    result_dir = os.path.join(settings.USR_RESULT_ROOT, tasks_to_visualize[i][6])
+    result_dir = os.path.join(settings.USR_VIS_ROOT, tasks_to_visualize[i][10])
     circos_nodes_path = result_dir + "/circos.nodes"
     circos_links_path = result_dir + "/circos.links"
 
@@ -42,9 +42,9 @@ while True:
     visual_result = os.system(visual_command)
 
     if visual_result == 0:
-      update_task = 'UPDATE task_task SET progress="visualized" where id=' + str(task_id)
+      update_task = 'UPDATE vis_vis SET progress="visualized" where id=' + str(task_id)
     else:
-      update_task = 'UPDATE task_task SET progress="failed" where id=' + str(task_id)
+      update_task = 'UPDATE vis_vis SET progress="failed" where id=' + str(task_id)
 
     print update_task
     cursor.execute(update_task)

@@ -8,6 +8,7 @@ INSTALL
 1. git clone https://github.com/jiangfeng1124/bigdata.git
 2. install `django`
 3. install `python-mysqldb`
-4. install required perl modules for `Circos`, `$CIRCOS/bin/test.modules` can be used to check which modules should be installed. add circos to $PATH
+4. install required perl modules for `Circos`, `$CIRCOS/bin/test.modules` can be used to check which modules should be installed. 
+5. add circos to $PATH. for some systems, create a soft link: "/bin/env" for "/usr/bin/env"
 5. install R and required R packages: `huge`, `optparse`, `bigmatrix`
 6. create a MySQL database named `graphdb`, initialize it using `graphdb.sql`

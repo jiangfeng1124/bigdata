@@ -71,7 +71,7 @@ ul {
   margin: 0;
 }
 
-.li-dataset, .li-program, .li-task {
+.li-dataset, .li-program, .li-task, .li-vis {
   padding: 10px 5px 5px 1em;
   font-size: 18px;
 }

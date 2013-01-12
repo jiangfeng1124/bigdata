@@ -14,6 +14,7 @@ import settings
 # connect to the database
 db = MySQLdb.connect(user=DBConf.USERNAME, db=DBConf.DATABASE, passwd=DBConf.PASSWD, host=DBConf.HOST)
 cursor = db.cursor()
+cursor.connection.autocommit(True)
 
 # read waiting(unprocessed or newly submitted) tasks every 5 seconds;
 while True:

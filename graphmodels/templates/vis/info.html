@@ -8,7 +8,7 @@
       <table cellpadding="5">
         <tr>
           <td><img src="/images/task.png" width="40"></td>
-          <td>Task #{{ task.id }}</td>
+          <td>Task #{{ vis.id }}</td>
         </tr>
       </table>
     </div>
@@ -17,48 +17,22 @@
         <tbody>
         <tr>
           <th>Dataset</th>
-          <td><a href="/datasets/{{ task.data.id }}">{{ task.data.name }}</a></td>
-        </tr>
-        <tr>
-          <th>Program</th>
-          <td><b>{{ task.program.name }}</b></td>
-        </tr>
-        <tr>
-          <th>Options</th>
-          <td>
-          {% if task.options == "" %}
-          (default setting)
-          {% else %}
-          {{ task.options }}
-          {% endif %}
-          </td>
+          <td>{{ vis.data_name }}</a></td>
         </tr>
         <tr>
           <th>Creator</th>
-          <td>{{ task.owner.username }}</td>
+          <td>{{ vis.owner.username }}</td>
         </tr>
         <tr>
           <th>Created</th>
-          <td>{{ task.create_date }}</td>
+          <td>{{ vis.create_date }}</td>
         </tr>
         </tbody>
       </table>
     </div>
 
     <div class="runtime-info">
-      <div id="status-info">Status: {{ task.progress }}</div>
-      <table border="0" cellspacing="2" cellpadding="0">
-        <tbody>
-          <tr>
-            <th>Total Time</th>
-            <td>unavailable</td>
-          </tr>
-          <tr>
-            <th>Max Memory Usage</th>
-            <td>unavailable</td>
-          </tr>
-        </tbody>
-      </table>
+      <div id="status-info">Status: {{ vis.progress }}</div>
     </div>
     <div style="clear:both"></div>
   </div>
@@ -78,7 +52,7 @@
   <div id="graph_vis">
     <div id="visualization2">
         <div class="visual_title">
-          Blackboard --- results of Task #{{ task.id }}:
+          Blackboard --- results of Task #{{ vis.id }}:
         </div>
     <div id="infovis">
         <div id="inner-details"></div>

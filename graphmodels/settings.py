@@ -71,6 +71,12 @@ MEDIA_URL = '/medias/'
 USR_DATASET_ROOT = os.path.join(os.path.dirname(__file__), 'files/dataset/').replace('\\', '/')
 USR_DATASET_URL = '/files/dataset/'
 
+USR_VDATASET_ROOT = os.path.join(os.path.dirname(__file__), 'files/vdataset/').replace('\\', '/')
+USR_VDATASET_URL = '/files/vdataset/'
+
+USR_VIS_ROOT = os.path.join(os.path.dirname(__file__), 'files/vresult/').replace('\\', '/')
+USR_VIS_URL = '/files/vresult/'
+
 USR_PROGRAM_ROOT = os.path.join(os.path.dirname(__file__), 'files/program/').replace('\\', '/')
 USR_PROGRAM_URL = '/files/program/'
 
@@ -160,6 +166,7 @@ INSTALLED_APPS = (
   'graphmodels.task',
   'graphmodels.filters',
   'graphmodels.tags',
+  'graphmodels.vis',
 )
 
 # A sample logging configuration. The only tangible logging

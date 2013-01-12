@@ -6,6 +6,7 @@ from graphmodels.views import index, test
 from graphmodels.dataset.views import *
 from graphmodels.program.views import *
 from graphmodels.task.views import *
+from graphmodels.vis.views import *
 
 #from graphmodels.accounts.views import *
 from django.contrib.auth.views import login, logout
@@ -20,6 +21,7 @@ import re
 urlpatterns = patterns('',
     url(r'^medias/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(r'^result/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.USR_RESULT_ROOT}),
+    url(r'^vresult/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.USR_VIS_ROOT}),
     url(r'^images/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.IMAGE_ROOT}),
     # Examples:
     # url(r'^$', 'graphmodels.views.home', name='home'),
@@ -50,4 +52,7 @@ urlpatterns = patterns('',
     url(r'^tasks/$', task_view),
     url(r'^tasks/(\d+)/$', task_info),
     url(r'^task/new/$', task_new),
+    url(r'^viss/$', vis_view),
+    url(r'^viss/(\d+)/$', vis_info),
+    url(r'^vis/upload/$', vis_upload),
 )

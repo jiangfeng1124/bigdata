@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load filters %}
+
+{% block content %}
+    <div id="tasks">
+      {% if notice %}
+        <span class="notice">{{notice}}</span>
+        <br><br>
+      {% endif %}
+      <div class="block_title">Your visualizations</div>
+      {% if vis_list|length == 0 %}
+      <div>
+        <p>You haven't create any visual task yet. <a href="/vis/upload/"><b>Create a new one</b></a>?</p>
+      </div>
+      <div style="clear:both"></div>
+      {% else %}
+      <div class="tbl_task">
+        <table class="sorted_table_box" cellpadding="2" cellspacing="0" align="left" border="1">
+          <tr>
+            <th>ID</th>
+            <th>Dataset</th>
+            <th>User</th>
+            <th>Create date</th>
+            <th>Status</th>
+          </tr>
+          {% for vis in vis_list %}
+            <tr>
+              <td class="td_task"><a href="/viss/{{ vis.id }}">#{{ vis.id }}</a></td>
+              <td class="td_data"><a href="/viss/{{ vis.id }}">{{ vis.data_name }}</a></td>
+              <td class="td_user">{{ vis.owner.username }}</td>
+              <td>{{ vis.create_date|time_until }}</td>
+              <td>{{ vis.progress }}</td>
+              <!--
+              <form action="." method="post" name="form">
+              {% csrf_token %}
+              <input type="hidden" name="id" value="{{ task.id }}">
+              {% if task.progress == "processed" %}
+              <td><input type="submit" value="Results"></td>
+              {% else %}
+              <td><input disabled="disabled" type="submit" value="Results"></td>
+              {% endif %}
+              </form>
+              -->
+            </tr>
+          {% endfor %}
+        </table>
+
+      </div>
+      {% endif %}
+{% endblock %}
