@@ -17,7 +17,7 @@ cursor.connection.autocommit(True)
 
 while True:
 
-  time.sleep(1)
+  time.sleep(5)
 
   query_task = 'SELECT * FROM task_task where progress="processed" ORDER BY create_date'
   cursor.execute(query_task)
