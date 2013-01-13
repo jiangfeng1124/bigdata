@@ -59,22 +59,22 @@ while True:
         circos_links_path = result_dir + "/circos.links"
         f_circos_links = open(circos_links_path, "w")
 
-        print "data_sep: " + data_sep
+        # print "data_sep: " + data_sep
         tbl_separator = {"tab":"\t", "comma":",", "semicolon":";", "space":" "}
         sep = tbl_separator[data_sep]
         nodenames = []
         if data_header == 1:
-          nodenames = f_mat.readline().strip().split(sep)
+            nodenames = f_mat.readline().strip().split(sep)
         else:
-          dim = len(f_mat.readline().strip().split(sep))
-          for i in range(1, dim+1):
-            nodenames.append("V"+str(i))
-          f_mat.seek(0) # return to the beginning
+            dim = len(f_mat.readline().strip().split(sep))
+            for i in range(1, dim+1):
+                nodenames.append("V"+str(i))
+            f_mat.seek(0) # return to the beginning
 
         # write nodes info(ideograms) to "circos.nodes"
         for i in range(0, len(nodenames)):
-          node_info = "chr - hs" + str(i+1) + " " + nodenames[i] + " 0 1 chr" + str((i+1)%24) + "\n"
-          f_circos_nodes.write(node_info) 
+            node_info = "chr - hs" + str(i+1) + " " + nodenames[i] + " 0 1 chr" + str((i+1)%24) + "\n"
+            f_circos_nodes.write(node_info) 
         f_circos_nodes.close()
 
         graph_json = []
@@ -88,52 +88,63 @@ while True:
         i = 0
         for line in f_mat.readlines():
 
-          icov_row = [float(e) for e in line.strip().split(sep)]
-          omega_row = [0 if e == 0 else 1 for e in icov_row]
+            icov_row = [float(e) for e in line.strip().split(sep)]
+            omega_row = [0 if e == 0 else 1 for e in icov_row]
 
-          # the degree of a node is sum(omega_row)-1 to exclude itself
-          degree_info[sum(omega_row)-1] = degree_info.get(sum(omega_row)-1, 0) + 1
-          dim = sum(omega_row) * 2
-          if dim > 12: dim = 12
-          if dim < 5: dim = 5
-          node = {}
-          node_adjacencies = []
-          node["id"] = nodenames[i]
-          node["name"] = node["id"]
-          node["data"] = {"$color":"#83548B", "$type":"circle", "$dim":dim}
+            # the degree of a node is sum(omega_row)-1 to exclude itself
+            key = sum(omega_row) if omega_row[i] == 0 else (sum(omega_row)-1)
+            degree_info[key] = degree_info.get(key, 0) + 1
 
-          for col in range(i+1, len(omega_row)):
+            # do not plot the nodes with 0 degree
+            if key == 0:
+                i += 1
+                continue
 
-            icov_json_row = {}
-            icov_json_row["c"] = []
+            # node_info = "chr - hs" + str(i+1) + " " + nodenames[i] + " 0 1 chr" + str((i+1)%24) + "\n"
+            # f_circos_nodes.write(node_info) 
 
-            if omega_row[col] != 0:
-              edge = {}
-              edge["nodeTo"] = nodenames[col]
-              edge["nodeFrom"] = nodenames[i]
-              edge["data"] = {"$color":"#557EAA"}
-              node_adjacencies.append(edge)
+            dim = sum(omega_row) * 2
+            if dim > 8: dim = 8
+            if dim < 4: dim = 4
+            node = {}
+            node_adjacencies = []
+            node["id"] = nodenames[i]
+            node["name"] = node["id"]
+            node["data"] = {"$color":"#83548B", "$type":"circle", "$dim":dim}
 
-              icov_json_row_item1 = {}
-              icov_json_row_item1["v"] = nodenames[i]
-              icov_json_row_item2 = {}
-              icov_json_row_item2["v"] = nodenames[col]
-              icov_json_row_item3 = {}
-              icov_json_row_item3["v"] = icov_row[col]
-              icov_json_row["c"].append(icov_json_row_item1)
-              icov_json_row["c"].append(icov_json_row_item2)
-              icov_json_row["c"].append(icov_json_row_item3)
+            for col in range(i+1, len(omega_row)):
 
-              icov_json["rows"].append(icov_json_row)
+                icov_json_row = {}
+                icov_json_row["c"] = []
 
-              # add a circos link
-              link_info = "hs" + str(i+1) + " 0 1 hs" + str(col+1) + " 0 1\n"
-              f_circos_links.write(link_info)
+                if omega_row[col] != 0:
+                    edge = {}
+                    edge["nodeTo"] = nodenames[col]
+                    edge["nodeFrom"] = nodenames[i]
+                    edge["data"] = {"$color":"#557EAA"}
+                    node_adjacencies.append(edge)
 
-          node["adjacencies"] = node_adjacencies
-          graph_json.append(node)
-          i += 1
+                    icov_json_row_item1 = {}
+                    icov_json_row_item1["v"] = nodenames[i]
+                    icov_json_row_item2 = {}
+                    icov_json_row_item2["v"] = nodenames[col]
+                    icov_json_row_item3 = {}
+                    icov_json_row_item3["v"] = icov_row[col]
+                    icov_json_row["c"].append(icov_json_row_item1)
+                    icov_json_row["c"].append(icov_json_row_item2)
+                    icov_json_row["c"].append(icov_json_row_item3)
 
+                    icov_json["rows"].append(icov_json_row)
+
+                    # add a circos link
+                    link_info = "hs" + str(i+1) + " 0 1 hs" + str(col+1) + " 0 1\n"
+                    f_circos_links.write(link_info)
+
+            node["adjacencies"] = node_adjacencies
+            graph_json.append(node)
+            i += 1
+
+        # f_circos_nodes.close()
         f_circos_links.close()
 
         simplejson.dump(graph_json, f_graph_json, indent="\t")
@@ -145,7 +156,7 @@ while True:
         degree_table = []
         degree_table.append(["degree", "frequency"])
         for key in sorted(degree_info.iterkeys(), reverse = True):
-          degree_table.append([str(key), degree_info[key]])
+            degree_table.append([str(key), degree_info[key]])
 
         pickle.dump(degree_table, f_degree)
         f_degree.close()

@@ -126,10 +126,17 @@ while True:
         omega_row = [0 if e == 0 else 1 for e in icov_row]
 
         # the degree of a node is sum(omega_row)-1 to exclude itself
-        degree_info[sum(omega_row)-1] = degree_info.get(sum(omega_row)-1, 0) + 1
+        key = sum(omega_row) if omega_row[i] == 0 else (sum(omega_row)-1)
+        degree_info[key] = degree_info.get(key, 0) + 1
+
+        # do not plot the nodes with 0 degree
+        if key == 0:
+          i += 1
+          continue
+
         dim = sum(omega_row) * 2
-        if dim > 12: dim = 12
-        if dim < 5: dim = 5
+        if dim > 8: dim = 8
+        if dim < 4: dim = 4
         node = {}
         node_adjacencies = []
         node["id"] = nodenames[i]
