@@ -76,7 +76,7 @@ ul {
   font-size: 18px;
 }
 
-.li-dataset, .li-program {
+.li-dataset, .li-program, .li-task {
   border-bottom: 1px solid #E6E6E6;
 }
 
@@ -91,7 +91,7 @@ ul {
 }
 
 .aside .info li a {
-  color: gray;
+  color: #515151;
   display: block;
 }
 
