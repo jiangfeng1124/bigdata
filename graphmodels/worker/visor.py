@@ -18,8 +18,6 @@ while True:
     
     time.sleep(2)
 
-    print "hello"
-
     query_vis = 'SELECT * FROM vis_vis where progress="waiting" ORDER BY create_date'
     cursor.execute(query_vis)
 
@@ -29,7 +27,7 @@ while True:
     for i in range(0, n):
 
         vis_id = vis_to_process[i][0]
-        update_vis = 'UPDATE vis_vis SET progress="processing" where id=1' 
+        update_vis = 'UPDATE vis_vis SET progress="processing" where id=' + str(vis_id)
         print update_vis
         cursor.execute(update_vis)
         print "Visualizing vis#", vis_id
@@ -61,11 +59,14 @@ while True:
         circos_links_path = result_dir + "/circos.links"
         f_circos_links = open(circos_links_path, "w")
 
+        print "data_sep: " + data_sep
+        tbl_separator = {"tab":"\t", "comma":",", "semicolon":";", "space":" "}
+        sep = tbl_separator[data_sep]
         nodenames = []
         if data_header == 1:
-          nodenames = f_mat.readline().strip().split()
+          nodenames = f_mat.readline().strip().split(sep)
         else:
-          dim = len(f_mat.readline().strip().split())
+          dim = len(f_mat.readline().strip().split(sep))
           for i in range(1, dim+1):
             nodenames.append("V"+str(i))
           f_mat.seek(0) # return to the beginning
@@ -87,7 +88,7 @@ while True:
         i = 0
         for line in f_mat.readlines():
 
-          icov_row = [float(e) for e in line.strip().split()]
+          icov_row = [float(e) for e in line.strip().split(sep)]
           omega_row = [0 if e == 0 else 1 for e in icov_row]
 
           # the degree of a node is sum(omega_row)-1 to exclude itself
