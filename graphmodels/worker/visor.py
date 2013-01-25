@@ -86,9 +86,15 @@ while True:
         icov_json["rows"] = []
 
         i = 0
+        fail_flag = False
         for line in f_mat.readlines():
 
-            icov_row = [float(e) for e in line.strip().split(sep)]
+            try:
+                icov_row = [float(e) for e in line.strip().split(sep)]
+            except:
+                fail_flag = True
+                break
+
             omega_row = [0 if e == 0 else 1 for e in icov_row]
 
             # the degree of a node is sum(omega_row)-1 to exclude itself
@@ -144,25 +150,26 @@ while True:
             graph_json.append(node)
             i += 1
 
-        # f_circos_nodes.close()
+        if fail_flag:
+            update_vis = 'UPDATE vis_vis SET progress="failed" where id=' + str(vis_id)
+            print update_vis
+            cursor.execute(update_vis)
+        else:
+            # f_circos_nodes.close()
+            simplejson.dump(graph_json, f_graph_json, indent="\t")
+            simplejson.dump(icov_json, f_icov_json, indent="\t")
+
+            degree_table = []
+            degree_table.append(["degree", "frequency"])
+            for key in sorted(degree_info.iterkeys(), reverse = True):
+                degree_table.append([str(key), degree_info[key]])
+            pickle.dump(degree_table, f_degree)
+
+            update_vis = 'UPDATE vis_vis SET progress="processed" where id=' + str(vis_id)
+            print update_vis
+            cursor.execute(update_vis)
+
         f_circos_links.close()
-
-        simplejson.dump(graph_json, f_graph_json, indent="\t")
         f_graph_json.close()
-
-        simplejson.dump(icov_json, f_icov_json, indent="\t")
         f_icov_json.close()
-
-        degree_table = []
-        degree_table.append(["degree", "frequency"])
-        for key in sorted(degree_info.iterkeys(), reverse = True):
-            degree_table.append([str(key), degree_info[key]])
-
-        pickle.dump(degree_table, f_degree)
         f_degree.close()
-
-        update_vis = 'UPDATE vis_vis SET progress="processed" where id=' + str(vis_id)
-
-        print update_vis
-        cursor.execute(update_vis)
-
