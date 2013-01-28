@@ -11,6 +11,8 @@
         <span class="notice">{{notice}}</span>
         <br><br>
       {% endif %}
+      <p class="alert text-info"><i class="icon-hand-right"></i>
+Please refer to the <a href="/docs/dataset/">Data Format</a> to guarantee your dataset is of particular format.</p>
       <form method="post" action="." enctype="multipart/form-data" name="form">
         {% csrf_token %}
         <table>
