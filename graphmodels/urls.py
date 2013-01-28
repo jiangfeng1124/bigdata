@@ -7,6 +7,7 @@ from graphmodels.dataset.views import *
 from graphmodels.program.views import *
 from graphmodels.task.views import *
 from graphmodels.vis.views import *
+from graphmodels.docs.views import *
 
 #from graphmodels.accounts.views import *
 from django.contrib.auth.views import login, logout
@@ -55,4 +56,10 @@ urlpatterns = patterns('',
     url(r'^viss/$', vis_view),
     url(r'^viss/(\d+)/$', vis_info),
     url(r'^vis/upload/$', vis_upload),
+    url(r'^docs/intro/$', docs_intro),
+    url(r'^docs/feature/$', docs_feature),
+    url(r'^docs/dataset/$', docs_dataset),
+    url(r'^docs/model/$', docs_api),
+    url(r'^about/$', docs_about),
+    url(r'^contact/$', docs_contact),
 )

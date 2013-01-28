@@ -1,0 +1,68 @@
+{% load tags %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="/medias/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/medias/css/base.css"/>
+  <link rel="stylesheet" type="text/css" href="/medias/bootstrap/css/bootstrap.css"/>
+</head>
+<body>
+  <div id="header" role="banner">
+  <div class="inner">
+    <a class="logo" href="/"><img src="/images/logo.png" width="360" height="50"></a>
+ 
+    <div class="user_info">
+        <span><a href="/">Dashboard</a></span>
+        <span class="divider"></span>
+        <span><a href="/docs/intro/">Documents</a></span>
+        <span class="divider"></span>
+
+        {% if user.is_authenticated %}
+        <span><a class="signout-btn" href="/accounts/logout/">Sign out</a></span>
+        {% else %}
+        <a class="signin-btn "href="/accounts/login/">Sign in</a>
+        {% endif %}
+    </div>
+  </div>
+  </div>
+
+  <div id="content" rose="main">
+  <div class="inner">
+    {% block content %}
+    {% endblock %}
+  </div>
+  </div>
+
+  {% block footer %}
+
+  <div style="clear:both"></div>
+  <div id="footer">
+    <div class="inner">
+      <div class="mod">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/about">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="mod">
+        <h4>Documentation</h4>
+        <ul>
+          <li><a href="/docs/dataset">Data format</a></li>
+          <li><a href="/docs/model">Model api</a></li>
+        </ul>
+      </div>
+      <p id="copyright">@2012 ORFE.Princeton. All rights reserved.</p>
+      <div style="clear:both"></div>
+    </div>
+  </div>
+
+  {% endblock %}
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="/medias/bootstrap/js/bootstrap.js" type="text/javascript" language="javascript"></script>
+</body>
+</html>

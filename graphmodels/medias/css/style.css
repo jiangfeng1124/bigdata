@@ -10,7 +10,6 @@ body {
   background: url(/images/header_bg.png) 0 0 repeat-x;
   color: white;
   margin-bottom: 35px;
-  box-shadow: 10px 5px 40px #888888;
 }
 
 #content {
@@ -109,6 +108,8 @@ ul {
 .logo {
   float: left;
   margin-top: 2px;
+  text-decoration: none !important;
+  font: bold 38px "Comic Sans MS Bold", "Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;
 }
 
 .user_info {
@@ -627,6 +628,7 @@ td.td_prog a {
   font-family: "Courier New";
   font-size: 16px;
   border-radius: 3px;
+  color: #d14;
 }
 
 .prg_ref {
@@ -985,3 +987,68 @@ div {
   display: block;
 }
 
+.intro_box.dataset {
+  background: url(/images/bg_intro1.png) no-repeat scroll left 30px transparent;
+  background-size: 300px;
+  min-height: 300px;
+}
+
+.intro_box.model {
+  background: url(/images/bg_intro2.png) no-repeat scroll right 30px transparent;
+  background-size: 300px;
+  min-height: 300px;
+}
+
+.intro_box.task {
+  background: url(/images/bg_intro4.png) no-repeat scroll left 30px transparent;
+  background-size: 300px;
+  min-height: 300px;
+}
+
+.intro_box.visual {
+  background: url(/images/bg_intro3.png) no-repeat scroll right 30px transparent;
+  background-size: 300px;
+  min-height: 250px;
+}
+
+.intro_box.dataset p, .intro_box.task p {
+  padding: 53px 53px 20px 358px;
+  min-height: 230px;
+  border-bottom: 1px solid #dfdddd;
+}
+
+.intro_box.model p, .intro_box.visual p {
+  padding: 53px 358px 20px 33px;
+  min-height: 230px;
+  border-bottom: 1px solid #dfdddd;
+}
+
+.intro_box.dataset p span, .intro_box.model p span, .intro_box.task p span, .intro_box.visual p span {
+  color: #293a43;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.intro_box {
+  border-top: 1px solid #fff;  
+  margin: 0 10px;
+}
+
+.intro_box p {
+  font-size: 13px;
+  color: #4a5860;
+  line-height: 20px;
+}
+
+.dataformat_box h3, .intro_box h3, .about_box h3, .api_box h3 {
+  border-bottom: 1px solid #ccc;
+  font-size: 160%;
+  margin: 2 0 1em;
+  padding: .5em 0;
+  color: #3a4f5a;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: bold;
+  line-height: 1.2em;
+}

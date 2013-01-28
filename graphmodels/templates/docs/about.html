@@ -1,0 +1,52 @@
+{% extends "docs.html" %}
+
+{% block title %}Model API{% endblock %}
+
+{% block content %}
+    <div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+      <ul class="nav nav-tabs">
+        <li><a href="/docs/intro/">How it works</a></li>
+        <li><a href="/docs/dataset/">Data format</a></li>
+        <li><a href="/docs/model/">Modle API</a></li>
+        <li class="active"><a href="/about/">About us</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="api">
+            <div class="about_box">
+                <h3>About us</h3>
+                <p>
+                    <ul class="media-list">
+                        <li class="media">
+                        <a class="pull-left" href="#">
+                        <img src="/images/han.jpg" height="150" width="100">
+                        </a>
+                        <div class="media-body">
+                            <a href="http://www.princeton.edu/~hanliu" target="_blank">Han Liu</a>
+                            <p>Assistant Professor<br>
+                            Operations Research and Financial Engineering<br>
+                            <strong>Princeton University</strong>
+                            </p>
+                        </div>
+                        </li>
+                        <li class="media">
+                        <a class="pull-left" href="#">
+                        <img src="/images/jiang.jpg" height="125" width="100">
+                        </a>
+                        <div class="media-body">
+                            <a href="http://ir.hit.edu.cn/~jguo" target="_blank">Jiang Guo</a>
+                            <p>Ph.D Candidate<br>
+                            Computer Science and Technology<br>
+                            <strong>Harbin Institute of Technology</strong></p>
+                        </div>
+                        </li>
+                    </ul>
+                </p> 
+                <h3>Contact</h3>
+                <p>You can email the Graphical Modeling Team at 
+                <span class="text-info"><a href="mailto:bigdata.support@gmail.com">bigdata.support (at) gmail.com</a></span>
+                </p>
+            </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

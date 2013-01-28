@@ -14,7 +14,8 @@
 
   <div id="header" role="banner">
   <div class="inner">
-    <a class="logo" href="/"><img src="/images/logo.png" width="360" height="50"></a>
+      <a class="logo" href="/"><img src="/images/logo.png" width="360" height="50"></a>
+      <!-- <h1><a class="logo" href="/">Graphical Modeling</a></h1> -->
 
 <!--
     <span>
@@ -26,14 +27,18 @@
     </span>
 -->
 
-    {% if user.is_authenticated %}
-    <span class="user_info"><a class="signout-btn" href="/accounts/logout/">Sign out</a></span>
-    {% else %}
     <div class="user_info">
-    <span class="divider"></span>
-    <a class="signin-btn "href="/accounts/login/">Sign in</a>
+        <span><a href="/">Dashboard</a></span>
+        <span class="divider"></span>
+        <span><a href="/docs/intro/">Documents</a></span>
+        <span class="divider"></span>
+
+        {% if user.is_authenticated %}
+        <span><a class="signout-btn" href="/accounts/logout/">Sign out</a></span>
+        {% else %}
+        <span><a class="signin-btn "href="/accounts/login/">Sign in</a></span>
+        {% endif %}
     </div>
-    {% endif %}
   </div>
   </div>
 
@@ -142,14 +147,14 @@
         <h4>Site</h4>
         <ul>
           <li><a href="/about">About</a></li>
-          <li><a href="mailto:jiangg@princeton.edu">Contact us</a></li>
+          <li><a href="/about">Contact us</a></li>
         </ul>
       </div>
       <div class="mod">
         <h4>Documentation</h4>
         <ul>
-          <li><a href="/specification/dataset">Data format</a></li>
-          <li><a href="/specification/model">Model api</a></li>
+          <li><a href="/docs/dataset">Data format</a></li>
+          <li><a href="/docs/model">Model api</a></li>
         </ul>
       </div>
       <p id="copyright">@2012 ORFE.Princeton. All rights reserved.</p>

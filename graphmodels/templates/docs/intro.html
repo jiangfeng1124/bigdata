@@ -1,0 +1,59 @@
+{% extends "docs.html" %}
+
+{% block title %}How it works{% endblock %}
+
+{% block content %}
+    <div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="/docs/intro/">How it works</a></li>
+        <li><a href="/docs/dataset/">Data format</a></li>
+        <li><a href="/docs/model/">Modle API</a></li>
+        <li><a href="/about/">About us</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="introduction">
+          <div class="intro_box">
+              <h3>How it works</h3>
+            <div class="intro_box dataset">
+                <p>
+                <span>Upload a dataset</span>
+                A dataset is a selection of your data you want to analysis using one of the graphical models.
+                The data file to be uploaded should be in a particular format, please refer to <a href="/docs/dataset/">this page</a>
+                for a detailed view of the data format. Using the configuration panel when uploading new datasets, 
+                you should correctly set the required fields including the separator, header information and access limitation 
+                for the System to analysis properly. In addition, you could write some description for your dataset as well.
+                </p>
+            </div>
+            <div class="intro_box model">
+                <p>
+                <span>Select a model</span>
+                The system currently provides three graphical models: the <code>glasso</code> (Graphical Lasso) model, 
+                the <code>CLIME</code> model and the <code>TIGER</code> model, amongest the TIGER model is thought to be state-of-the-art.
+                We provide the possibility for users to tune the model by setting their own runtime options.
+                Parameter tuning shall be important for models like glasso and CLIME. The TIGER
+                model, however, reserves the tuning-insensitive property that can save a lot of tuning work.
+                The interface for users to upload new models is not fulfilled yet, if you want to submit 
+                your own graphical model, please <a href="/contact/">contact us</a>.
+                </p>
+            </div>
+            <div class="intro_box task">
+                <p>
+                <span>Create a task</span>
+                With a simple click, you can run one of the Graphical Models the system provided on a dataset.
+                The dataset will be analysed and result(the inverse covariance matrix) will be visualized. Using the configuration panel
+                when creating new tasks, you could set runtime options and access limitation of that task.
+                </p>
+            </div>
+            <div class="intro_box visual">
+                <p>
+                <span>Visualization</span>
+                Two visualization manners are supported by our service. One is the interaction manner, and another is static. 
+                In order to create interactive visualizations, we adopted the <code>Infovis</code> toolkit, which is a javascript library 
+                for visualizing various types of data. For the static one, we used the <code>Circos</code> software. 
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -37,12 +37,22 @@
         {% endif %}
         </div>
       <div>
-        <div class="prog_box_header">Set options: (leave it blank to use default setting)</div>
+          <div class="prog_box_header">Set options: (leave it blank to use <strong>default</strong> setting)</div>
         <div style="clear:both"></div>
-        <textarea rows="1" cols="40" name="options" placeholder="set options here..." autocomplete="off"></textarea>
+        {% if program_id != 1 %}
+          <div class="input-prepend">
+            <span class="add-on text-error">l = </span>
+            <input class="span2" name="options" id="prependedInput" type="text" placeholder="lambda">
+          </div>
+        {% else %}
+          <div class="input-prepend">
+            <span class="add-on text-error">t = </span>
+            <input class="span2" name="options" id="prependedInput" type="text" placeholder="threshold">
+          </div>
+        {% endif %}
       </div>
       <div id="task_access">
-        *Set this task as <input type="radio" name="access" value="public" checked="checked"><b>Public</b> or <input type="radio" name="access" value="Private"><b>Private</b>
+          <strong>Set this task as</strong> <input type="radio" name="access" value="public" checked="checked"><b>Public</b> or <input type="radio" name="access" value="Private"><b>Private</b>
       </div>
       </div>
       <p><input class="submit_buttons" type="submit" value="Submit my task"></p>

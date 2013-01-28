@@ -131,7 +131,13 @@ def task_new(request):
 
     query_program = (Q(id=program_id))
     program = Program.objects.filter(query_program)[0]
-    task_options = request.POST["options"]
+    if request.POST["options"] == "":
+      task_options = ""
+    else:
+      if program_id == 1:
+        task_options = "-t " + request.POST["options"]
+      else:
+        task_options = "-l " + request.POST["options"]
 
     create_date = datetime.datetime.now()
     access = request.POST["access"]
