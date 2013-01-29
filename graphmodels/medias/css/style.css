@@ -139,7 +139,7 @@ ul {
   background-image: -o-linear-gradient(top, #39CC4A 0%,#39B54A 100%);
   background-image: linear-gradient(top, #39CC4A 0%,#39B54A 100%);
   padding: 0 6px;
-  border: 1px solid #093;
+  border: 1px solid #093 !important;
   border-radius: 3px;
 }
 
@@ -150,6 +150,7 @@ ul {
   background-image: -moz-linear-gradient(top, #39CC33 0%,#39CC00 100%);
   background-image: -o-linear-gradient(top, #39CC33 0%,#39CC00 100%);
   background-image: linear-gradient(top, #39CC33 0%,#39CC00 100%);
+  padding-bottom: 0px !important;
 }
 
 .signout-btn:active, .signin-btn:active, .signup-btn:active {
@@ -1036,7 +1037,7 @@ div {
   margin-bottom: 16px;
 }
 
-.intro_box {
+.intro_box .dataformat_box .api_box .about_box {
   border-top: 1px solid #fff;  
   margin: 0 10px;
 }
