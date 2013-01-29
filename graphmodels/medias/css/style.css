@@ -5,7 +5,7 @@ body {
 }
 
 #header {
-  height: 45px;
+  height: 50px;
   padding: 10px;
   background: url(/images/header_bg.png) 0 0 repeat-x;
   color: white;
@@ -107,7 +107,7 @@ ul {
 
 .logo {
   float: left;
-  margin-top: 2px;
+  margin-top: -8px;
   text-decoration: none !important;
   font: bold 38px "Comic Sans MS Bold", "Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;
 }
@@ -116,12 +116,17 @@ ul {
   line-height: 45px;
   float:right;
   color:black;
-  margin-top:10px;
+  margin-top:15px;
 }
 
 .user_info a {
-  text-decoration: none;
+  text-decoration: none !important;
   line-height: 25px;
+}
+
+.user_info a:hover {
+  border-bottom: 2px solid #009933;
+  padding-bottom: 3px;
 }
 
 .signin-btn, .signup-btn, .signout-btn {
@@ -280,7 +285,7 @@ h1 {
 
 .intro_info {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px 15px 5px 18px;
   margin-bottom: 10px;
   border: 1px solid #CCC;
@@ -1052,3 +1057,9 @@ div {
   font-weight: bold;
   line-height: 1.2em;
 }
+
+.nav_active {
+  border-bottom: 2px solid #009933;
+  padding-bottom: 3px;
+}
+

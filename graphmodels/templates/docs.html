@@ -12,14 +12,13 @@
 <body>
   <div id="header" role="banner">
   <div class="inner">
-    <a class="logo" href="/"><img src="/images/logo.png" width="360" height="50"></a>
+    <a class="logo" href="/"><img src="/images/logo7.png"></a>
  
     <div class="user_info">
         <span><a href="/">Dashboard</a></span>
         <span class="divider"></span>
-        <span><a href="/docs/intro/">Documents</a></span>
+        <span class="nav_active"><a href="/docs/intro/">Documents</a></span>
         <span class="divider"></span>
-
         {% if user.is_authenticated %}
         <span><a class="signout-btn" href="/accounts/logout/">Sign out</a></span>
         {% else %}
