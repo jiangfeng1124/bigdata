@@ -124,7 +124,7 @@ ul {
   line-height: 25px;
 }
 
-.user_info a:hover {
+.user_info .nav_txt a:hover {
   border-bottom: 2px solid #009933;
   padding-bottom: 3px;
 }
@@ -150,7 +150,6 @@ ul {
   background-image: -moz-linear-gradient(top, #39CC33 0%,#39CC00 100%);
   background-image: -o-linear-gradient(top, #39CC33 0%,#39CC00 100%);
   background-image: linear-gradient(top, #39CC33 0%,#39CC00 100%);
-  padding-bottom: 0px !important;
 }
 
 .signout-btn:active, .signin-btn:active, .signup-btn:active {
